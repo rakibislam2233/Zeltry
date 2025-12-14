@@ -1,5 +1,5 @@
 import { Heart, Plus, Star, StarHalf } from 'lucide-react';
-import React from 'react';
+import Link from 'next/link';
 import { Product } from '../shared/BrowseCategories';
 
 interface ProductCardProps {
@@ -10,27 +10,27 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 p-4 shadow-card hover:shadow-card-hover transition-all duration-300 group relative">
             {product.badge && (
-                <span className={`absolute top-4 left-4 text-white text-[10px] font-bold px-2 py-1 rounded ${product.badge.colorClass}`}>
+                <span className={`absolute top-4 left-4 text-white text-[10px] font-bold px-2 py-1 rounded ${product.badge.colorClass} z-10`}>
                     {product.badge.text}
                 </span>
             )}
-            <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors">
+            <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors z-10">
                 <Heart className="w-5 h-5" />
             </button>
 
-            <div className="h-40 w-full mb-4 rounded-lg overflow-hidden bg-white flex items-center justify-center p-2">
+            <Link href={`/product/${product.id}`} className="block h-40 w-full mb-4 rounded-lg overflow-hidden bg-white flex items-center justify-center p-2 relative">
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                    className="h-full object-contain mix-blend-multiply dark:mix-blend-normal hover:scale-105 transition-transform duration-300"
                 />
-            </div>
+            </Link>
 
             <div className="flex flex-col gap-1">
                 <span className="text-xs text-text-muted">{product.category}</span>
-                <a href="#" className="font-bold text-text-main dark:text-gray-100 hover:text-primary transition-colors line-clamp-2 min-h-[48px]">
+                <Link href={`/product/${product.id}`} className="font-bold text-text-main dark:text-gray-100 hover:text-primary transition-colors line-clamp-2 min-h-[48px]">
                     {product.name}
-                </a>
+                </Link>
 
                 <div className="flex items-center gap-1 mb-1">
                     {[1, 2, 3, 4, 5].map((star) => {

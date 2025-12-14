@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import Link from 'next/link';
 
 export const Footer = () => {
     return (
@@ -7,12 +8,12 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Brand */}
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2">
+                        <Link href="/" className="flex items-center gap-2">
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
                                 O
                             </div>
                             <span className="text-xl font-bold tracking-tight text-foreground">Oryzn</span>
-                        </div>
+                        </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">
                             Oryzn is your one-stop shop for fresh, organic, and healthy foods. We deliver nature's best right to your doorstep with love and care.
                         </p>
@@ -31,13 +32,13 @@ export const Footer = () => {
 
                     {/* Links 1 */}
                     <div>
-                        <h3 className="font-bold text-lg mb-6">About Zilly</h3>
+                        <h3 className="font-bold text-lg mb-6">About Oryzn</h3>
                         <ul className="space-y-4 text-sm text-muted-foreground">
-                            <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Delivery Information</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
+                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="/delivery" className="hover:text-primary transition-colors">Delivery Information</Link></li>
+                            <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -45,11 +46,11 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-bold text-lg mb-6">My Account</h3>
                         <ul className="space-y-4 text-sm text-muted-foreground">
-                            <li><a href="#" className="hover:text-primary transition-colors">Sign In</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">View Cart</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">My Wishlist</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Track My Order</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Help Ticket</a></li>
+                            <li><Link href="/login" className="hover:text-primary transition-colors">Sign In</Link></li>
+                            <li><Link href="/cart" className="hover:text-primary transition-colors">View Cart</Link></li>
+                            <li><Link href="/dashboard/wishlist" className="hover:text-primary transition-colors">My Wishlist</Link></li>
+                            <li><Link href="/dashboard/orders" className="hover:text-primary transition-colors">Track My Order</Link></li>
+                            <li><Link href="/help" className="hover:text-primary transition-colors">Help Ticket</Link></li>
                         </ul>
                     </div>
 

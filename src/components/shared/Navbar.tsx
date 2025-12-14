@@ -8,6 +8,7 @@ import {
     Truck,
     User
 } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar: React.FC = () => {
@@ -31,7 +32,7 @@ const Navbar: React.FC = () => {
                             <span className="w-[1px] h-3 bg-gray-300 dark:bg-gray-700"></span>
                             <button className="hover:text-primary transition-colors">USD</button>
                             <span className="w-[1px] h-3 bg-gray-300 dark:bg-gray-700"></span>
-                            <a className="hover:text-primary transition-colors" href="#">My Account</a>
+                            <Link className="hover:text-primary transition-colors" href="/dashboard">My Account</Link>
                         </div>
                     </div>
                 </div>
@@ -42,12 +43,12 @@ const Navbar: React.FC = () => {
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex items-center justify-between gap-8">
                         {/* Logo */}
-                        <div className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
+                        <Link href="/" className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
                             <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                                 <Leaf className="w-6 h-6" />
                             </div>
-                            <h1 className="text-2xl font-bold tracking-tight text-text-main dark:text-white">Zilly</h1>
-                        </div>
+                            <h1 className="text-2xl font-bold tracking-tight text-text-main dark:text-white">Oryzn</h1>
+                        </Link>
 
                         {/* Search Bar */}
                         <div className="flex-1 max-w-3xl hidden md:block">
@@ -69,14 +70,14 @@ const Navbar: React.FC = () => {
 
                         {/* User Actions */}
                         <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-                            <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
+                            <Link href="/dashboard" className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
                                 <User className="w-6 h-6" />
-                            </button>
-                            <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
+                            </Link>
+                            <Link href="/dashboard/wishlist" className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
                                 <Heart className="w-6 h-6" />
                                 <span className="absolute top-1 right-0 w-4 h-4 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">2</span>
-                            </button>
-                            <button className="flex items-center gap-3 pl-2 pr-0 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+                            </Link>
+                            <Link href="/cart" className="flex items-center gap-3 pl-2 pr-0 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
                                 <div className="relative">
                                     <ShoppingCart className="w-7 h-7 text-text-main dark:text-white" />
                                     <span className="absolute -top-1 -right-1 w-5 h-5 bg-secondary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">4</span>
@@ -85,7 +86,7 @@ const Navbar: React.FC = () => {
                                     <span className="text-[11px] text-text-muted">My Cart</span>
                                     <span className="text-sm font-bold text-text-main dark:text-white">$57.00</span>
                                 </div>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
