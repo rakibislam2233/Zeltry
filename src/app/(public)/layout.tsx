@@ -2,11 +2,11 @@ import { Footer } from "@/components/shared/Footer";
 import { Navbar } from "@/components/shared/Navbar";
 import { ReactNode } from "react";
 
-interface MainLayoutProps {
+interface PublicLayoutProps {
     children: ReactNode;
 }
 
-export function MainLayout({ children }: MainLayoutProps) {
+export default function PublicLayout({ children }: PublicLayoutProps) {
     return (
         <div className="flex min-h-screen flex-col font-sans">
             <Navbar />
