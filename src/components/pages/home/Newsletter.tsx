@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { Mail } from 'lucide-react';
 
 const Newsletter: React.FC = () => {
     return (
@@ -7,7 +9,7 @@ const Newsletter: React.FC = () => {
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-white">
-                        <span className="material-symbols-outlined text-4xl">mail</span>
+                        <Mail className="w-8 h-8" />
                     </div>
                     <div className="text-white">
                         <h3 className="text-xl font-bold">Join our newsletter</h3>

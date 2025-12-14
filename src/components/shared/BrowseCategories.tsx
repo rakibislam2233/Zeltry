@@ -1,3 +1,17 @@
+import {
+    ArrowRight,
+    Carrot,
+    Coffee,
+    Cookie,
+    Croissant,
+    Drumstick,
+    Egg,
+    HelpCircle,
+    Menu,
+    Percent,
+    Store,
+    Timer
+} from 'lucide-react';
 import React from 'react';
 
 export interface Product {
@@ -16,18 +30,18 @@ export interface Product {
 
 export interface Category {
     name: string;
-    icon: string;
+    icon: React.ReactNode;
     count: number;
     active?: boolean;
 }
 
 const categories: Category[] = [
-    { name: 'Beverages', icon: 'local_cafe', count: 8 },
-    { name: 'Vegetables', icon: 'nutrition', count: 12, active: true },
-    { name: 'Meat & Fish', icon: 'lunch_dining', count: 5 },
-    { name: 'Snacks', icon: 'cookie', count: 9 },
-    { name: 'Dairy', icon: 'egg', count: 14 },
-    { name: 'Bakery', icon: 'bakery_dining', count: 22 },
+    { name: 'Beverages', icon: <Coffee className="w-5 h-5" />, count: 8 },
+    { name: 'Vegetables', icon: <Carrot className="w-5 h-5" />, count: 12, active: true },
+    { name: 'Meat & Fish', icon: <Drumstick className="w-5 h-5" />, count: 5 },
+    { name: 'Snacks', icon: <Cookie className="w-5 h-5" />, count: 9 },
+    { name: 'Dairy', icon: <Egg className="w-5 h-5" />, count: 14 },
+    { name: 'Bakery', icon: <Croissant className="w-5 h-5" />, count: 22 },
 ];
 
 const BrowseCategories: React.FC = () => {
@@ -37,7 +51,7 @@ const BrowseCategories: React.FC = () => {
             {/* Categories Menu */}
             <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card overflow-hidden border border-gray-100 dark:border-gray-800">
                 <div className="bg-primary px-5 py-4 flex items-center gap-3">
-                    <span className="material-symbols-outlined text-white">menu</span>
+                    <Menu className="text-white w-6 h-6" />
                     <h2 className="text-white font-bold text-lg">Browse Categories</h2>
                 </div>
                 <div className="py-2">
@@ -51,7 +65,7 @@ const BrowseCategories: React.FC = () => {
                                 }`}
                         >
                             <div className="flex items-center gap-3">
-                                <span className={`material-symbols-outlined ${cat.active ? 'text-primary' : 'text-gray-400 group-hover:text-primary'}`}>
+                                <span className={`${cat.active ? 'text-primary' : 'text-gray-400 group-hover:text-primary'}`}>
                                     {cat.icon}
                                 </span>
                                 <span className={`text-sm font-medium ${cat.active ? 'text-primary font-bold' : 'text-text-main dark:text-gray-200'}`}>
@@ -66,7 +80,7 @@ const BrowseCategories: React.FC = () => {
                 </div>
                 <div className="px-5 py-3 border-t border-gray-100 dark:border-gray-800">
                     <a className="text-sm font-medium text-primary hover:underline flex items-center gap-1" href="#">
-                        View All Categories <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        View All Categories <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                 </div>
             </div>
@@ -74,13 +88,13 @@ const BrowseCategories: React.FC = () => {
             {/* Main Menu Links */}
             <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card p-2 border border-gray-100 dark:border-gray-800">
                 {[
-                    { icon: 'storefront', text: 'Shop' },
-                    { icon: 'percent', text: 'Offers' },
-                    { icon: 'schedule', text: 'Daily Deals' },
-                    { icon: 'contact_support', text: 'Help Center' }
+                    { icon: <Store className="w-5 h-5" />, text: 'Shop' },
+                    { icon: <Percent className="w-5 h-5" />, text: 'Offers' },
+                    { icon: <Timer className="w-5 h-5" />, text: 'Daily Deals' },
+                    { icon: <HelpCircle className="w-5 h-5" />, text: 'Help Center' }
                 ].map((item, idx) => (
                     <a key={idx} className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-gray-200 font-medium" href="#">
-                        <span className="material-symbols-outlined text-gray-500">{item.icon}</span> {item.text}
+                        <span className="text-gray-500">{item.icon}</span> {item.text}
                     </a>
                 ))}
             </div>
@@ -97,7 +111,7 @@ const BrowseCategories: React.FC = () => {
                     <h3 className="text-white text-xl font-bold leading-tight mb-2">Fresh Strawberries</h3>
                     <p className="text-white/80 text-sm mb-4">Starting at $4.99</p>
                     <button className="flex items-center gap-2 text-primary font-bold text-sm bg-white px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
-                        Shop Now <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        Shop Now <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>
             </div>

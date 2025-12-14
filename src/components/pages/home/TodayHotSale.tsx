@@ -1,6 +1,8 @@
 import ProductCard from '@/components/common/ProductCard';
 import { Product } from '@/components/shared/BrowseCategories';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import React from 'react';
+
 const products: Product[] = [
     {
         id: '1',
@@ -52,10 +54,10 @@ const TodayHotSale: React.FC = () => {
                 </div>
                 <div className="flex gap-2">
                     <button className="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors">
-                        <span className="material-symbols-outlined text-sm">arrow_back</span>
+                        <ArrowLeft className="w-4 h-4" />
                     </button>
                     <button className="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors">
-                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        <ArrowRight className="w-4 h-4" />
                     </button>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import React from 'react'
 
 const HomePage = () => {
     return (
-        <section>
+        <section className='w-full space-y-5 md:space-y-7'>
             <PromotionBanner />
             <TodayHotSale />
             <FreshVegetables />

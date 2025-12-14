@@ -1,3 +1,4 @@
+import { Heart, Plus, Star, StarHalf } from 'lucide-react';
 import React from 'react';
 import { Product } from '../shared/BrowseCategories';
 
@@ -14,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 </span>
             )}
             <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors">
-                <span className="material-symbols-outlined">favorite</span>
+                <Heart className="w-5 h-5" />
             </button>
 
             <div className="h-40 w-full mb-4 rounded-lg overflow-hidden bg-white flex items-center justify-center p-2">
@@ -37,8 +38,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         const isHalf = star === Math.ceil(product.rating) && !Number.isInteger(product.rating);
 
                         return (
-                            <span key={star} className={`material-symbols-outlined text-sm ${isFilled || isHalf ? 'text-secondary' : 'text-gray-300'}`}>
-                                {isHalf ? 'star_half' : 'star'}
+                            <span key={star} className={`${isFilled || isHalf ? 'text-secondary' : 'text-gray-300'}`}>
+                                {isHalf ? (
+                                    <StarHalf className="w-3.5 h-3.5 fill-current" />
+                                ) : (
+                                    <Star className={`w-3.5 h-3.5 ${isFilled ? 'fill-current' : ''}`} />
+                                )}
                             </span>
                         );
                     })}
@@ -53,8 +58,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         <span className="text-lg font-bold text-primary">${product.price.toFixed(2)}</span>
                     </div>
                     <button className="w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center group-hover:w-full group-hover:rounded-lg">
-                        <span className="material-symbols-outlined group-hover:hidden">add</span>
-                        <span className="hidden group-hover:inline text-sm font-bold">Add to Cart</span>
+                        <Plus className="w-5 h-5 group-hover:hidden" />
+                        <span className="hidden group-hover:inline text-sm font-bold ml-1">Add to Cart</span>
                     </button>
                 </div>
             </div>

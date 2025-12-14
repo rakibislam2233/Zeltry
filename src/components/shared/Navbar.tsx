@@ -1,3 +1,13 @@
+import {
+    ChevronDown,
+    Heart,
+    Leaf,
+    MapPin,
+    Search,
+    ShoppingCart,
+    Truck,
+    User
+} from 'lucide-react';
 import React from 'react';
 
 const Navbar: React.FC = () => {
@@ -9,11 +19,11 @@ const Navbar: React.FC = () => {
                     <div className="flex items-center justify-between h-9 text-xs font-medium text-text-muted">
                         <div className="flex items-center gap-4">
                             <span className="flex items-center gap-1">
-                                <span className="material-symbols-outlined text-[14px]">location_on</span> Store Location: New York
+                                <MapPin className="w-3.5 h-3.5" /> Store Location: New York
                             </span>
                             <span className="w-[1px] h-3 bg-gray-300 dark:bg-gray-700"></span>
                             <span className="flex items-center gap-1">
-                                <span className="material-symbols-outlined text-[14px]">local_shipping</span> Free Shipping on Orders $50+
+                                <Truck className="w-3.5 h-3.5" /> Free Shipping on Orders $50+
                             </span>
                         </div>
                         <div className="flex items-center gap-4">
@@ -34,7 +44,7 @@ const Navbar: React.FC = () => {
                         {/* Logo */}
                         <div className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
                             <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                                <span className="material-symbols-outlined text-3xl">eco</span>
+                                <Leaf className="w-6 h-6" />
                             </div>
                             <h1 className="text-2xl font-bold tracking-tight text-text-main dark:text-white">Zilly</h1>
                         </div>
@@ -44,7 +54,7 @@ const Navbar: React.FC = () => {
                             <div className="flex w-full items-center h-12 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-800 overflow-hidden focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
                                 <div className="hidden lg:flex items-center h-full border-r border-gray-200 dark:border-gray-700 px-4 bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                     <span className="text-sm font-medium text-text-main dark:text-white">All Categories</span>
-                                    <span className="material-symbols-outlined text-lg ml-2 text-text-muted">expand_more</span>
+                                    <ChevronDown className="w-4 h-4 ml-2 text-text-muted" />
                                 </div>
                                 <input
                                     className="flex-1 h-full px-4 bg-transparent border-none focus:ring-0 text-text-main dark:text-white placeholder-gray-400 outline-none"
@@ -52,7 +62,7 @@ const Navbar: React.FC = () => {
                                     type="text"
                                 />
                                 <button className="h-full px-6 bg-primary hover:bg-primary-dark text-white font-medium transition-colors flex items-center justify-center">
-                                    <span className="material-symbols-outlined">search</span>
+                                    <Search className="w-5 h-5" />
                                 </button>
                             </div>
                         </div>
@@ -60,15 +70,15 @@ const Navbar: React.FC = () => {
                         {/* User Actions */}
                         <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
                             <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
-                                <span className="material-symbols-outlined text-[24px]">person</span>
+                                <User className="w-6 h-6" />
                             </button>
                             <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white relative transition-colors">
-                                <span className="material-symbols-outlined text-[24px]">favorite</span>
+                                <Heart className="w-6 h-6" />
                                 <span className="absolute top-1 right-0 w-4 h-4 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">2</span>
                             </button>
                             <button className="flex items-center gap-3 pl-2 pr-0 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
                                 <div className="relative">
-                                    <span className="material-symbols-outlined text-[28px] text-text-main dark:text-white">shopping_cart</span>
+                                    <ShoppingCart className="w-7 h-7 text-text-main dark:text-white" />
                                     <span className="absolute -top-1 -right-1 w-5 h-5 bg-secondary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">4</span>
                                 </div>
                                 <div className="hidden lg:flex flex-col items-start leading-none">

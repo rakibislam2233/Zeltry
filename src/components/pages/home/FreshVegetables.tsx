@@ -1,5 +1,6 @@
 import ProductCard from '@/components/common/ProductCard';
 import { Product } from '@/components/shared/BrowseCategories';
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 const products: Product[] = [
     {
@@ -45,7 +46,9 @@ const FreshVegetables: React.FC = () => {
                     <h2 className="text-xl md:text-2xl font-bold text-text-main dark:text-white">Fresh Vegetables</h2>
                     <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary rounded-full"></div>
                 </div>
-                <a className="text-sm font-medium text-primary hover:underline" href="#">View All</a>
+                <a className="text-sm font-medium text-primary hover:underline flex items-center gap-1" href="#">
+                    View All <ArrowRight className="w-4 h-4" />
+                </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {products.map(product => (
