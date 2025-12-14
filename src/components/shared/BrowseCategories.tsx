@@ -46,7 +46,7 @@ const categories: Category[] = [
 
 const BrowseCategories: React.FC = () => {
     return (
-        <aside className="w-[280px] flex-shrink-0 hidden lg:flex flex-col gap-6 sticky top-24 h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide">
+        <aside className="w-[280px] shrink-0 hidden lg:flex flex-col gap-6 sticky top-24 h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide">
 
             {/* Categories Menu */}
             <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card overflow-hidden border border-gray-100 dark:border-gray-800">
@@ -100,12 +100,12 @@ const BrowseCategories: React.FC = () => {
             </div>
 
             {/* Mini Banner */}
-            <div className="rounded-xl overflow-hidden relative group cursor-pointer h-64 flex-shrink-0">
+            <div className="rounded-xl overflow-hidden relative group cursor-pointer h-64 shrink-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8UB057O_lxHeuFlAEJdAzA_IHyLzd-ckcMl8dt7ialw5W3k3eMn-ajQsxv0_T7_zRQXf-bvo8ZdGK02a1aVYl1YYy8NTX-NcKEKgcB-_mAQVtLgVI-H8_Ms1QB_aV6uojV1XNdUxRILKJU8CHWbHO4anfJWWs4gRDAZ9QYJtuoaijEEGJjYQzYpGd7vNVoBuThinZqpOLhE1Ik0-VxUivQhDlA4i-C_ZXNImNFE4h9XJ6eTj8GpHt1y7iRUMMdwxoBv7o_XxG28Eo')" }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6">
                     <span className="bg-secondary text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">ORGANIC</span>
                     <h3 className="text-white text-xl font-bold leading-tight mb-2">Fresh Strawberries</h3>

@@ -7,7 +7,7 @@ const OrderSummary = () => {
             <div className="flex flex-col gap-4 mb-6">
                 {[1, 2].map(i => (
                     <div key={i} className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded border bg-white p-1 flex-shrink-0">
+                        <div className="w-14 h-14 rounded border bg-white p-1 shrink-0">
                             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bDAHC4b7UhmkO7nHgs2vjXZ6egKyv4IZCUP0MkH7vjcgd1cC8QHldltnUEO6MlNr4dXHibNB4RQuCo6yRd7P1GtjRzHpiqXxVKzr_vsOBodY_qSyASHz4W-zg4urN9781S_pH7TTOTSe0DfITyYSOs-c0epBdkrJrH_kaI8c0zjROsQqnjofaE-yNE1MV59WEW-U_V5xVEiYH_3qXPlgQSaF81DN0HUciwkA93D_MS6XDSNodbtzRSssU-guwikE_6JG6xijPJMr" alt="Apple" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1">

@@ -14,7 +14,7 @@ const ProductGallery = () => {
     return (
         <div className="flex flex-col gap-4">
             {/* Main Image */}
-            <div className="relative aspect-square md:aspect-[4/3] bg-white rounded-xl border border-gray-100 dark:border-gray-800 p-8 flex items-center justify-center overflow-hidden group">
+            <div className="relative aspect-square md:aspect-4/3 bg-white rounded-xl border border-gray-100 dark:border-gray-800 p-8 flex items-center justify-center overflow-hidden group">
                 <img
                     src={images[selectedImage]}
                     alt="Product"
