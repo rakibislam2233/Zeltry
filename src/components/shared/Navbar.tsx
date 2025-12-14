@@ -8,9 +8,9 @@ export function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl">
-                        Z
+                        O
                     </div>
-                    <span className="text-2xl font-bold tracking-tight text-foreground">Zilly</span>
+                    <span className="text-2xl font-bold tracking-tight text-foreground">Oryzn</span>
                 </Link>
 
                 {/* Search Bar - Hidden on mobile, visible on lg */}

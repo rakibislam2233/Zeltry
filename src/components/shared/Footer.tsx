@@ -9,12 +9,12 @@ export function Footer() {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
-                                Z
+                                O
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-foreground">Zilly</span>
+                            <span className="text-xl font-bold tracking-tight text-foreground">Oryzn</span>
                         </div>
                         <p className="text-muted-foreground text-sm leading-relaxed">
-                            Zilly is your one-stop shop for fresh, organic, and healthy foods. We deliver nature's best right to your doorstep with love and care.
+                            Oryzn is your one-stop shop for fresh, organic, and healthy foods. We deliver nature's best right to your doorstep with love and care.
                         </p>
                         <div className="flex items-center gap-4">
                             <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all">
@@ -74,7 +74,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-                    <p>© 2025 Zilly. All rights reserved.</p>
+                    <p>© 2025 Oryzn. All rights reserved.</p>
                     <div className="flex items-center gap-2">
                         <span className="px-2 py-1 border rounded bg-background">Visa</span>
                         <span className="px-2 py-1 border rounded bg-background">Mastercard</span>

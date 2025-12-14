@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zilly - Fresh & Organic Grocery Store",
+  title: "Oryzn - Fresh & Organic Grocery Store",
   description: "Your one-stop shop for fresh, organic, and healthy foods.",
 };
 
