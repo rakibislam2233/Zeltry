@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <Heart className="w-4 h-4" />
             </button>
 
-            <Link href={`/product/${product.id}`} className="block relative w-full aspect-square mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center p-6 cursor-pointer">
+            <Link href={`/product/${product.id}`} className="block relative w-full aspect-square mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-800/50 md:flex items-center justify-center p-6 cursor-pointer">
                 <img
                     src={product.image}
                     alt={product.name}

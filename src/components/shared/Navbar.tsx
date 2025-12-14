@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <nav className="w-full">
             {/* Top Utility Bar */}
             <div className="bg-surface-light dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800 hidden md:block">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-9 text-xs font-medium text-text-muted">
                         <div className="flex items-center gap-4">
                             <span className="flex items-center gap-1">
@@ -40,10 +40,10 @@ const Navbar: React.FC = () => {
 
             {/* Main Header */}
             <header className="sticky top-0 z-40 bg-surface-light dark:bg-surface-dark border-b border-gray-100 dark:border-gray-800 shadow-sm">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex items-center justify-between gap-8">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-2 flex-shrink-0 cursor-pointer">
+                        <Link href="/" className="flex items-center gap-2 shrink-0 cursor-pointer">
                             <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                                 <Leaf className="w-6 h-6" />
                             </div>

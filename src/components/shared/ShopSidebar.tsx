@@ -5,7 +5,7 @@ const ShopSidebar = () => {
     const [priceRange, setPriceRange] = useState([50, 1500]);
 
     return (
-        <aside className="w-[280px] flex-shrink-0 hidden lg:flex flex-col gap-8 sticky top-24 h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide pr-2">
+        <aside className="w-[280px] shrink-0 hidden lg:flex flex-col gap-8 sticky top-24 h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide pr-2">
 
             {/* Filter Button (Mobile mainly, but here for header) */}
             <div className="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">

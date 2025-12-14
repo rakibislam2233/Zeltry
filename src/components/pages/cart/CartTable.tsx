@@ -59,7 +59,7 @@ const CartTable = () => {
                             <tr key={item.id} className="group hover:bg-gray-50/50 dark:hover:bg-gray-800/50 transition-colors">
                                 <td className="px-6 py-4">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-16 h-16 rounded border bg-white p-1 flex-shrink-0">
+                                        <div className="w-16 h-16 rounded border bg-white p-1 shrink-0">
                                             <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
                                         </div>
                                         <span className="font-medium text-text-main dark:text-white group-hover:text-primary transition-colors">{item.name}</span>
