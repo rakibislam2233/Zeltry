@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         const isHalf = star === Math.ceil(product.rating) && !Number.isInteger(product.rating);
 
                         return (
-                            <span key={star} className={`${isFilled || isHalf ? 'text-secondary' : 'text-gray-300'}`}>
+                            <span key={star} className={`${isFilled || isHalf ? 'text-yellow-400' : 'text-gray-300'}`}>
                                 {isHalf ? (
                                     <StarHalf className="w-3.5 h-3.5 fill-current" />
                                 ) : (

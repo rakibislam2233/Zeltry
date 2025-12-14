@@ -17,11 +17,11 @@ const ProductInfo = () => {
 
                 <div className="flex items-center gap-4 mb-4">
                     <div className="flex items-center gap-1 text-secondary">
-                        <Star className="w-4 h-4 fill-current text-yellow-500" />
-                        <Star className="w-4 h-4 fill-current text-yellow-500" />
-                        <Star className="w-4 h-4 fill-current text-yellow-500" />
-                        <Star className="w-4 h-4 fill-current text-yellow-500" />
-                        <Star className="w-4 h-4 fill-current text-yellow-500" />
+                        <Star className="w-4 h-4  text-yellow-500" />
+                        <Star className="w-4 h-4  text-yellow-500" />
+                        <Star className="w-4 h-4  text-yellow-500" />
+                        <Star className="w-4 h-4  text-yellow-500" />
+                        <Star className="w-4 h-4  text-yellow-500" />
                         <span className="text-text-main dark:text-gray-300 ml-1 font-medium bg-transparent">4.0 Review</span>
                     </div>
                     <span className="text-gray-300">|</span>

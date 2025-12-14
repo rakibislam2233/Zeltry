@@ -4,10 +4,10 @@ import { useState } from 'react';
 
 const ProductGallery = () => {
     const images = [
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuDqW12_e4r5_t6y7u8i9o0p1a2s3d4f5g6h7j8k9l0z1x2c3v4b5n6m7,',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuDtP22_w-C3_a9b_7vR8o1WfJ5q2xY3z4e5r6t7y8u9i0o1p2a3s4d5f6g7h8j9k0l1',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuCsD12_f3g4_h5j6k7l8z9x0c1v2b3n4m5,',
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuD_1a2s3d4f5g6h7j8k9l0z1x2c3v4b5n6m'
+        'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop', // Watch Main
+        'https://images.unsplash.com/photo-1544117519-31a4b719223d?q=80&w=1000&auto=format&fit=crop', // Watch Side
+        'https://images.unsplash.com/photo-1579586337278-3c971ba30fb0?q=80&w=1000&auto=format&fit=crop', // Watch Detail
+        'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=1000&auto=format&fit=crop' // Watch Lifestyle
     ];
     const [selectedImage, setSelectedImage] = useState(0);
 
