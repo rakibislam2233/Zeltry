@@ -1,4 +1,4 @@
-import { ChevronDown, Heart, MapPin, Menu, Phone, Search, ShoppingCart } from "lucide-react";
+import { ArrowRight, ChevronDown, Heart, MapPin, Menu, Phone, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 export function Navbar() {
@@ -90,12 +90,26 @@ export function Navbar() {
                 <div className="container mx-auto px-4 h-14 flex items-center justify-between">
 
                     {/* Browse Categories Button - This matches the sidebar width usually */}
-                    <div className="flex items-center">
+                    <div className="flex items-center relative group">
                         <button className="flex items-center gap-3 bg-primary text-primary-foreground px-6 h-14 font-semibold hover:bg-primary/90 transition-colors">
                             <Menu className="h-6 w-6" />
                             <span>Browse All Categories</span>
                             <ChevronDown className="h-4 w-4 ml-2 opacity-70" />
                         </button>
+
+                        {/* Dropdown Menu (Absolute) */}
+                        <div className="absolute top-full left-0 w-full min-w-[300px] bg-card border shadow-lg rounded-b-lg overflow-hidden hidden group-hover:block z-50">
+                            <ul className="flex flex-col text-sm font-medium text-foreground/80 py-2">
+                                {["Fresh Fruit", "Vegetables", "River Fish", "Chicken & Meat", "Drink & Water", "Yogurt & Ice Cream", "Cake & Bread", "Butter & Cream", "Cooking", "View all Categories"].map((cat, i) => (
+                                    <li key={i}>
+                                        <Link href="/shop" className="flex items-center justify-between px-6 py-3 hover:bg-primary/5 hover:text-primary hover:font-bold transition-all border-b last:border-0 border-dashed border-gray-100">
+                                            <span>{cat}</span>
+                                            {i < 3 && <ArrowRight className="h-3 w-3 opacity-50" />}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Nav Links */}

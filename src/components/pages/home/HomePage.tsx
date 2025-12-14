@@ -1,32 +1,20 @@
 
 import { ProductCard } from "@/components/common/ProductCard";
+import { ArrowRight, Headphones, Package, ShieldCheck, Truck } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, Truck, Headphones, ShieldCheck, Package } from "lucide-react";
 
 export function HomePage() {
     return (
         <div className="bg-background pb-16">
 
             {/* Hero Container - Grid (Sidebar, Main, Side Banners) */}
-            <section className="container mx-auto px-4 pt-6">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <section className="pt-0"> {/* Removed container and top padding as layout handles it */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                    {/* Sidebar (Col 3/12) - Visible on Desktop, Hidden Mobile */}
-                    <div className="hidden lg:flex lg:col-span-3 flex-col border rounded-lg overflow-hidden h-fit bg-card shadow-sm">
-                        <ul className="flex flex-col text-sm font-medium text-foreground/80">
-                            {["Fresh Fruit", "Vegetables", "River Fish", "Chicken & Meat", "Drink & Water", "Yogurt & Ice Cream", "Cake & Bread", "Butter & Cream", "Cooking", "View all Categories"].map((cat, i) => (
-                                <li key={i}>
-                                    <Link href="#" className="flex items-center justify-between px-5 py-3 hover:bg-primary/5 hover:text-primary hover:font-bold transition-all border-b last:border-0 border-dashed border-gray-100">
-                                        <span>{cat}</span>
-                                        {i < 3 && <ArrowRight className="h-3 w-3 opacity-50" />}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Sidebar (Removed - moved to PublicLayout) */}
 
-                    {/* Main Hero Slider (Col 6/12) */}
-                    <div className="col-span-1 lg:col-span-6">
+                    {/* Main Hero Slider (Col 2/3) */}
+                    <div className="col-span-1 lg:col-span-2">
                         <div className="relative h-full min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden bg-[#F2F2F2] flex items-center p-8 md:p-12">
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-multiply"></div>
                             {/* Circle Blob */}
@@ -50,8 +38,8 @@ export function HomePage() {
                         </div>
                     </div>
 
-                    {/* Right Banners (Col 3/12) */}
-                    <div className="col-span-1 lg:col-span-3 flex flex-col gap-6">
+                    {/* Right Banners (Col 1/3) */}
+                    <div className="col-span-1 lg:col-span-1 flex flex-col gap-6">
                         {/* Banner 1 */}
                         <div className="relative h-full min-h-[240px] rounded-lg overflow-hidden bg-black flex flex-col justify-center p-6 text-white bg-[url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
                             <div className="absolute inset-0 bg-black/40"></div>
@@ -80,7 +68,7 @@ export function HomePage() {
             </section>
 
             {/* Features Bar */}
-            <section className="container mx-auto px-4 mt-8">
+            <section className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 border rounded-lg bg-card shadow-sm">
                     {[
                         { icon: Truck, title: "Free Shipping", desc: "Free shipping on all your order" },
@@ -102,7 +90,7 @@ export function HomePage() {
             </section>
 
             {/* Today's Hot Sale */}
-            <section className="container mx-auto px-4 mt-16">
+            <section className="mt-16">
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-bold">Today's Hot Sale</h2>
                     <Link href="/shop" className="text-primary font-medium hover:underline flex items-center gap-1">
