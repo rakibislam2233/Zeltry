@@ -27,15 +27,15 @@ const DashboardSidebar = () => {
                     <Heart className="w-5 h-5" />
                     Wishlist
                 </Link>
-                <Link href="/dashboard/address" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors">
+                <Link href="/dashboard/addresses" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors">
                     <MapPin className="w-5 h-5" />
-                    Address
+                    Addresses
                 </Link>
-                <Link href="/dashboard/settings" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors">
+                <Link href="/dashboard/account" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors">
                     <Settings className="w-5 h-5" />
-                    Settings
+                    Account Details
                 </Link>
-                <Link href="/logout" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 transition-colors mt-4">
+                <Link href="/" className="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 transition-colors mt-4">
                     <LogOut className="w-5 h-5" />
                     Log Out
                 </Link>
