@@ -16,7 +16,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
 
       {/* Main Content Area with Fixed Sidebar */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 mt-16">
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           {/* Sidebar - Dynamic based on route */}
           {isShopPage ? <ShopSidebar /> : <BrowseCategories />}

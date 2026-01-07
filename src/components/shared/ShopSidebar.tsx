@@ -1,19 +1,13 @@
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import useScrollPosition from "@/hooks/useScrollPosition";
 
 const ShopSidebar = () => {
   const [priceRange, setPriceRange] = useState([50, 1500]);
-  const scrollPosition = useScrollPosition();
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    // Set the sidebar to be sticky when user scrolls past 100px (adjust as needed)
-    setIsSticky(scrollPosition > 100);
-  }, [scrollPosition]);
 
   return (
-    <aside className={`w-[280px] shrink-0 hidden lg:flex flex-col gap-8 ${isSticky ? 'sticky top-4 h-[calc(100vh-100px)]' : 'relative top-24'} overflow-y-auto scrollbar-hide pr-2`}>
+    <aside
+      className={`w-[280px] shrink-0 hidden lg:flex flex-col gap-8 overflow-x-hidden overflow-y-auto scrollbar-hide pr-2`}
+    >
       {/* Filter Button (Mobile mainly, but here for header) */}
       <div className="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
         <h2 className="text-xl font-bold flex items-center gap-2">
