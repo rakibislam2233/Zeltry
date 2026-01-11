@@ -104,7 +104,7 @@ const ShopPage = () => {
             </div>
 
             {/* Sort Bar */}
-            <div className="bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-lg p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-lg p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p className="text-sm text-text-muted">Showing 1–9 of 120 results</p>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                     <div className="flex items-center gap-2 text-sm font-medium mr-auto sm:mr-0">

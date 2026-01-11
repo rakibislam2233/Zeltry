@@ -14,7 +14,7 @@ const ProductGallery = () => {
     return (
         <div className="flex flex-col gap-4">
             {/* Main Image */}
-            <div className="relative aspect-square md:aspect-4/3 bg-white rounded-xl border border-gray-100 dark:border-gray-800 p-8 flex items-center justify-center overflow-hidden group">
+            <div className="relative aspect-square md:aspect-4/3 bg-white rounded-xl border border-gray-200 dark:border-gray-800 p-8 flex items-center justify-center overflow-hidden group">
                 <img
                     src={images[selectedImage]}
                     alt="Product"
@@ -42,7 +42,7 @@ const ProductGallery = () => {
                     <div
                         key={idx}
                         onClick={() => setSelectedImage(idx)}
-                        className={`aspect-square bg-white rounded-lg border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary ring-1 ring-primary' : 'border-gray-100 dark:border-gray-800 hover:border-primary/50'}`}
+                        className={`aspect-square bg-white rounded-lg border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary ring-1 ring-primary' : 'border-gray-200 dark:border-gray-800 hover:border-primary/50'}`}
                     >
                         <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
                     </div>

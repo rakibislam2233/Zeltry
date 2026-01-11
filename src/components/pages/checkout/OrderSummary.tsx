@@ -1,7 +1,7 @@
 
 const OrderSummary = () => {
     return (
-        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm">
+        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm">
             <h2 className="text-lg font-bold text-text-main dark:text-white mb-6">Order Summary</h2>
 
             <div className="flex flex-col gap-4 mb-6">
@@ -28,7 +28,7 @@ const OrderSummary = () => {
                     <span className="text-text-muted">Shipping:</span>
                     <span className="font-medium text-text-main dark:text-white">Free</span>
                 </div>
-                <div className="flex items-center justify-between border-t border-gray-100 dark:border-gray-800 pt-3">
+                <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-3">
                     <span className="font-bold text-text-main dark:text-white">Total:</span>
                     <span className="font-bold text-lg text-primary">$84.00</span>
                 </div>

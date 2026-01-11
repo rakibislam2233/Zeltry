@@ -11,7 +11,7 @@ const ProductDetailsPage = () => {
                 { label: 'Smart Watch' }
             ]} />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-surface-light dark:bg-surface-dark p-6 md:p-10 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-surface-light dark:bg-surface-dark p-6 md:p-10 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
                 <ProductGallery />
                 <ProductInfo />
             </div>

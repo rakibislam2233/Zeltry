@@ -78,7 +78,7 @@ const OrdersPage = () => {
             <div className="space-y-4">
                 {filteredOrders.length > 0 ? (
                     filteredOrders.map(order => (
-                        <div key={order.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div key={order.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm hover:shadow-md transition-shadow">
                             <div className="flex flex-col md:flex-row gap-6">
                                 {/* Image */}
                                 <div className="w-20 h-20 flex-shrink-0 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center p-2">
@@ -102,7 +102,7 @@ const OrdersPage = () => {
                                         <p className="text-sm font-medium text-text-main dark:text-gray-200 line-clamp-1">{order.product} <span className="text-text-muted font-normal">+ {order.items > 1 ? order.items - 1 : 0} more</span></p>
                                     </div>
 
-                                    <div className="flex items-center justify-between md:flex-col md:items-end gap-2 md:gap-4 pl-0 md:pl-4 md:border-l border-gray-100 dark:border-gray-800 min-w-[140px]">
+                                    <div className="flex items-center justify-between md:flex-col md:items-end gap-2 md:gap-4 pl-0 md:pl-4 md:border-l border-gray-200 dark:border-gray-800 min-w-[140px]">
                                         <div className="hidden md:flex flex-col items-end">
                                             <span className="font-bold text-lg text-primary">${order.total.toFixed(2)}</span>
                                             <span className="text-xs text-text-muted">{order.items} Items</span>
@@ -117,7 +117,7 @@ const OrdersPage = () => {
                         </div>
                     ))
                 ) : (
-                    <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+                    <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
                         <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
                             <Package className="w-8 h-8 text-text-muted" />
                         </div>

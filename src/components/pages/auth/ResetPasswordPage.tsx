@@ -8,7 +8,7 @@ const ResetPasswordPage = () => {
 
     return (
         <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white dark:bg-gray-950">
-            <div className="w-full max-w-md space-y-8 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl dark:shadow-none border border-gray-100 dark:border-gray-800">
+            <div className="w-full max-w-md space-y-8 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl dark:shadow-none border border-gray-200 dark:border-gray-800">
                 <div className="flex justify-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                         <RefreshCw className="w-8 h-8" />

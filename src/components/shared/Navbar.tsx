@@ -1,19 +1,17 @@
 import {
-  ChevronDown,
-  Heart,
-  Leaf,
-  MapPin,
-  Search,
-  ShoppingCart,
-  Truck,
-  User,
+    ChevronDown,
+    Heart,
+    Leaf,
+    Search,
+    ShoppingCart,
+    User
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="w-full fixed z-40 bg-background  border-b border-gray-100">
+    <nav className="w-full fixed z-40 bg-background  border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between gap-8">
           {/* Logo */}

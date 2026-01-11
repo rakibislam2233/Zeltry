@@ -50,7 +50,7 @@ const WishlistPage = () => {
                     ))}
                 </div>
             ) : (
-                <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+                <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
                     <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
                         <ShoppingBag className="w-8 h-8 text-text-muted" />
                     </div>

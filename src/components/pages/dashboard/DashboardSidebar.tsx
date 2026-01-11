@@ -5,8 +5,8 @@ const DashboardSidebar = () => {
     // We can use usePathname here if we mark as client component or just use Links
 
     return (
-        <aside className="w-full lg:w-[280px] bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden h-fit">
-            <div className="p-6 text-center border-b border-gray-100 dark:border-gray-800">
+        <aside className="w-full lg:w-[280px] bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden h-fit">
+            <div className="p-6 text-center border-b border-gray-200 dark:border-gray-800">
                 <div className="w-20 h-20 mx-auto rounded-full bg-gray-100 mb-4 overflow-hidden border-2 border-primary">
                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bDAHC4b7UhmkO7nHgs2vjXZ6egKyv4IZCUP0MkH7vjcgd1cC8QHldltnUEO6MlNr4dXHibNB4RQuCo6yRd7P1GtjRzHpiqXxVKzr_vsOBodY_qSyASHz4W-zg4urN9781S_pH7TTOTSe0DfITyYSOs-c0epBdkrJrH_kaI8c0zjROsQqnjofaE-yNE1MV59WEW-U_V5xVEiYH_3qXPlgQSaF81DN0HUciwkA93D_MS6XDSNodbtzRSssU-guwikE_6JG6xijPJMr" alt="User" className="w-full h-full object-cover" />
                 </div>

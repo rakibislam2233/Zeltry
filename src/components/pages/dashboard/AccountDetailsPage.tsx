@@ -9,10 +9,10 @@ const AccountDetailsPage = () => {
                 <p className="text-text-muted text-sm">Update your profile and password</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
+            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
                 <form className="space-y-8">
                     {/* Profile Photo */}
-                    <div className="flex flex-col sm:flex-row items-center gap-6 pb-8 border-b border-gray-100 dark:border-gray-800">
+                    <div className="flex flex-col sm:flex-row items-center gap-6 pb-8 border-b border-gray-200 dark:border-gray-800">
                         <div className="relative group">
                             <div className="w-24 h-24 rounded-full bg-gray-100 border-2 border-primary overflow-hidden">
                                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4bDAHC4b7UhmkO7nHgs2vjXZ6egKyv4IZCUP0MkH7vjcgd1cC8QHldltnUEO6MlNr4dXHibNB4RQuCo6yRd7P1GtjRzHpiqXxVKzr_vsOBodY_qSyASHz4W-zg4urN9781S_pH7TTOTSe0DfITyYSOs-c0epBdkrJrH_kaI8c0zjROsQqnjofaE-yNE1MV59WEW-U_V5xVEiYH_3qXPlgQSaF81DN0HUciwkA93D_MS6XDSNodbtzRSssU-guwikE_6JG6xijPJMr" alt="Profile" className="w-full h-full object-cover" />
@@ -65,7 +65,7 @@ const AccountDetailsPage = () => {
                     </div>
 
                     {/* Password Change */}
-                    <div className="pt-6 border-t border-gray-100 dark:border-gray-800">
+                    <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
                         <h3 className="font-bold text-lg text-text-main dark:text-white mb-6">Change Password</h3>
                         <div className="space-y-4">
                             <div className="space-y-2">

@@ -42,11 +42,11 @@ const CartTable = () => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden shadow-sm">
+        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
                 <table className="w-full text-left">
                     <thead>
-                        <tr className="bg-gray-50 dark:bg-gray-800 text-text-muted text-xs uppercase font-bold border-b border-gray-100 dark:border-gray-700">
+                        <tr className="bg-gray-50 dark:bg-gray-800 text-text-muted text-xs uppercase font-bold border-b border-gray-200 dark:border-gray-700">
                             <th className="px-6 py-4">Product</th>
                             <th className="px-6 py-4">Price</th>
                             <th className="px-6 py-4">Quantity</th>
@@ -102,7 +102,7 @@ const CartTable = () => {
                 </table>
             </div>
 
-            <div className="p-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <button className="text-sm font-bold bg-gray-100 dark:bg-gray-800 text-text-main dark:text-white px-6 py-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto">
                     Return to Shop
                 </button>

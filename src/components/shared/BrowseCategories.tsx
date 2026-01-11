@@ -1,16 +1,15 @@
 import {
-  ArrowRight,
-  Carrot,
-  Coffee,
-  Cookie,
-  Croissant,
-  Drumstick,
-  Egg,
-  HelpCircle,
-  Menu,
-  Percent,
-  Store,
-  Timer,
+    ArrowRight,
+    Carrot,
+    Coffee,
+    Cookie,
+    Croissant,
+    Drumstick,
+    Egg,
+    HelpCircle,
+    Percent,
+    Store,
+    Timer
 } from "lucide-react";
 
 export interface Product {
@@ -54,7 +53,7 @@ const BrowseCategories: React.FC = () => {
       className={`w-70 shrink-0 hidden lg:flex flex-col gap-6  overflow-y-auto scrollbar-hide`}
     >
       {/* Main Menu Links */}
-      <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card p-2 border border-gray-100 dark:border-gray-800">
+      <div className="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card p-2 border border-gray-200 dark:border-gray-800">
         {[
           { icon: <Store className="w-5 h-5" />, text: "Shop" },
           { icon: <Percent className="w-5 h-5" />, text: "Offers" },

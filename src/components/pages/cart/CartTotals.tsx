@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 const CartTotals = () => {
     return (
-        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm h-fit">
+        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm h-fit">
             <h2 className="text-lg font-bold text-text-main dark:text-white mb-6">Cart Total</h2>
 
             <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-800">
+                <div className="flex items-center justify-between py-3 border-b border-gray-200 dark:border-gray-800">
                     <span className="text-text-muted text-sm">Subtotal:</span>
                     <span className="font-bold text-text-main dark:text-white">$84.00</span>
                 </div>
-                <div className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-800">
+                <div className="flex items-center justify-between py-3 border-b border-gray-200 dark:border-gray-800">
                     <span className="text-text-muted text-sm">Shipping:</span>
                     <span className="font-bold text-text-main dark:text-white">Free</span>
                 </div>

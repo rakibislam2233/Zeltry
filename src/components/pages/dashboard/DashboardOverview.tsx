@@ -5,7 +5,7 @@ const DashboardOverview = () => {
         <div className="flex flex-col gap-8">
             {/* Stats Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4">
+                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-500 flex items-center justify-center">
                         <Package className="w-6 h-6" />
                     </div>
@@ -14,7 +14,7 @@ const DashboardOverview = () => {
                         <p className="text-sm text-text-muted">Total Orders</p>
                     </div>
                 </div>
-                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4">
+                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-yellow-50 dark:bg-yellow-900/20 text-yellow-500 flex items-center justify-center">
                         <Truck className="w-6 h-6" />
                     </div>
@@ -23,7 +23,7 @@ const DashboardOverview = () => {
                         <p className="text-sm text-text-muted">Pending Orders</p>
                     </div>
                 </div>
-                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4">
+                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-green-50 dark:bg-green-900/20 text-green-500 flex items-center justify-center">
                         <Package className="w-6 h-6" />
                     </div>
@@ -32,7 +32,7 @@ const DashboardOverview = () => {
                         <p className="text-sm text-text-muted">Completed Orders</p>
                     </div>
                 </div>
-                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4">
+                <div className="p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-red-50 dark:bg-red-900/20 text-red-500 flex items-center justify-center">
                         <MapPin className="w-6 h-6" />
                     </div>
@@ -44,8 +44,8 @@ const DashboardOverview = () => {
             </div>
 
             {/* Recent Order History */}
-            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden">
-                <div className="p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
+                <div className="p-6 flex items-center justify-between border-b border-gray-200 dark:border-gray-800">
                     <h2 className="font-bold text-lg text-text-main dark:text-white">Recent Order History</h2>
                     <button className="text-primary text-sm font-medium hover:underline">View All</button>
                 </div>

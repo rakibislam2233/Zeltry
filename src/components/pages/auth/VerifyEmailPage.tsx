@@ -1,12 +1,11 @@
 'use client';
 import { ArrowLeft, Lock } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 
 const VerifyEmailPage = () => {
     return (
         <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white dark:bg-gray-950">
-           <div className="w-full max-w-md space-y-8 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl dark:shadow-none border border-gray-100 dark:border-gray-800">
+           <div className="w-full max-w-md space-y-8 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl dark:shadow-none border border-gray-200 dark:border-gray-800">
                 <div className="flex justify-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                         <Lock className="w-8 h-8" />
@@ -40,7 +39,7 @@ const VerifyEmailPage = () => {
                         <span className="ml-2 text-xs">(00:30)</span>
                     </div>
 
-                    <div className="flex justify-center pt-4 border-t border-gray-100 dark:border-gray-800">
+                    <div className="flex justify-center pt-4 border-t border-gray-200 dark:border-gray-800">
                         <Link href="/login" className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main dark:hover:text-white transition-colors">
                             <ArrowLeft className="w-4 h-4" />
                             Back to Login

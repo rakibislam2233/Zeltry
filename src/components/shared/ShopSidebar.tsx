@@ -1,5 +1,5 @@
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const ShopSidebar = () => {
   const [priceRange, setPriceRange] = useState([50, 1500]);
@@ -9,7 +9,7 @@ const ShopSidebar = () => {
       className={`w-[280px] shrink-0 hidden lg:flex flex-col gap-8 overflow-x-hidden overflow-y-auto scrollbar-hide pr-2`}
     >
       {/* Filter Button (Mobile mainly, but here for header) */}
-      <div className="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800">
+      <div className="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-800">
         <h2 className="text-xl font-bold flex items-center gap-2">
           Filters
           <span className="text-xs font-normal text-text-muted bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded-full">
