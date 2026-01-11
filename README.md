@@ -1,4 +1,4 @@
-# Oryzn Client
+# Zeltry
 
 <div align="center">
 
@@ -261,7 +261,7 @@ If you have any questions or issues, feel free to:
 
 <div align="center">
 
-Made with ❤️ by the Oryzn Team
+Made with ❤️ by the Zeltry Team
 
 [Back to top](#oryzn-client)
 
