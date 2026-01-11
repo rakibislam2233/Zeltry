@@ -12,10 +12,10 @@ export const Footer = () => {
                             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
                                 O
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-foreground">Oryzn</span>
+                            <span className="text-xl font-bold tracking-tight text-foreground">Zeltry</span>
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">
-                            Oryzn is your one-stop shop for fresh, organic, and healthy foods. We deliver nature's best right to your doorstep with love and care.
+                            Zeltry is your one-stop shop for fresh, organic, and healthy foods. We deliver nature's best right to your doorstep with love and care.
                         </p>
                         <div className="flex items-center gap-4">
                             <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all">
@@ -32,7 +32,7 @@ export const Footer = () => {
 
                     {/* Links 1 */}
                     <div>
-                        <h3 className="font-bold text-lg mb-6">About Oryzn</h3>
+                        <h3 className="font-bold text-lg mb-6">About Zeltry</h3>
                         <ul className="space-y-4 text-sm text-muted-foreground">
                             <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="/delivery" className="hover:text-primary transition-colors">Delivery Information</Link></li>
@@ -75,7 +75,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="border-t pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-                    <p>© 2025 Oryzn. All rights reserved.</p>
+                    <p>© 2025 Zeltry. All rights reserved.</p>
                     <div className="flex items-center gap-2">
                         <span className="px-2 py-1 border rounded bg-background">Visa</span>
                         <span className="px-2 py-1 border rounded bg-background">Mastercard</span>

@@ -17,7 +17,7 @@ const RegisterPage = () => {
                         <div className="w-6 h-6 bg-primary rounded flex items-center justify-center text-white font-bold text-xs">
                             O
                         </div>
-                        <span className="font-bold text-lg text-text-main dark:text-white">Oryzn</span>
+                        <span className="font-bold text-lg text-text-main dark:text-white">Zeltry</span>
                     </Link>
 
                     <div>

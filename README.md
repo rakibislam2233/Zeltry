@@ -53,7 +53,7 @@ A modern, feature-rich e-commerce platform built with Next.js, TypeScript, and T
 ## 📁 Project Structure
 
 ```
-oryzn-client/
+Zeltry-client/
 ├── components.json         # Component library configuration
 ├── next.config.ts          # Next.js configuration
 ├── package.json            # Dependencies and scripts
@@ -85,8 +85,8 @@ oryzn-client/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rakibislam2233/oryzn-client.git
-   cd oryzn-client
+   git clone https://github.com/rakibislam2233/Zeltry-client.git
+   cd Zeltry-client
    ```
 
 2. Install dependencies:
@@ -172,7 +172,7 @@ EMAIL_SERVER_PASSWORD=your-email-password
 
 # Other Services
 NEXT_PUBLIC_API_URL=http://localhost:3000
-NEXT_PUBLIC_APP_NAME=Oryzn Client
+NEXT_PUBLIC_APP_NAME=Zeltry Client
 ```
 
 ## 🚀 Deployment
@@ -200,8 +200,8 @@ CMD ["npm", "start"]
 
 Build and run:
 ```bash
-docker build -t oryzn-client .
-docker run -p 3000:3000 oryzn-client
+docker build -t Zeltry-client .
+docker run -p 3000:3000 Zeltry-client
 ```
 
 ### Manual Deployment
@@ -263,6 +263,6 @@ If you have any questions or issues, feel free to:
 
 Made with ❤️ by the Zeltry Team
 
-[Back to top](#oryzn-client)
+[Back to top](#Zeltry-client)
 
 </div>

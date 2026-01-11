@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
               <Leaf className="w-6 h-6" />
             </div>
             <h1 className="text-2xl font-bold tracking-tight text-text-main dark:text-white">
-              Oryzn
+              Zeltry
             </h1>
           </Link>
 
