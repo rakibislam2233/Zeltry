@@ -1,42 +1,41 @@
-import {
-    BadgeCheck,
-    BadgePercent,
-    HandCoins,
-    LayoutGrid,
-    PackageCheck,
-} from "lucide-react";
+import assortmentGif from "@/assets/services/assortment.gif";
+import bestPriceGif from "@/assets/services/best-price.gif";
+import dealGif from "@/assets/services/deal.gif";
+import freeDeliveryGif from "@/assets/services/free-delivery.gif";
+import rotateGif from "@/assets/services/rotate.gif";
+import Image, { type StaticImageData } from "next/image";
 
 type HighlightItem = {
   title: string;
   subtitle: string;
-  icon: React.ReactNode;
+  image: StaticImageData;
 };
 
 const highlights: HighlightItem[] = [
   {
     title: "Best prices & offers",
     subtitle: "Orders $50 or more",
-    icon: <BadgePercent className="h-6 w-6 text-primary" />,
+    image: bestPriceGif,
   },
   {
     title: "Free delivery",
     subtitle: "24/7 amazing services",
-    icon: <PackageCheck className="h-6 w-6 text-primary" />,
+    image: freeDeliveryGif,
   },
   {
     title: "Great daily deal",
     subtitle: "When you sign up",
-    icon: <HandCoins className="h-6 w-6 text-primary" />,
+    image: dealGif,
   },
   {
     title: "Wide assortment",
     subtitle: "Mega Discounts",
-    icon: <LayoutGrid className="h-6 w-6 text-primary" />,
+    image: assortmentGif,
   },
   {
     title: "Easy returns",
     subtitle: "Within 30 days",
-    icon: <BadgeCheck className="h-6 w-6 text-primary" />,
+    image: rotateGif,
   },
 ];
 
@@ -46,9 +45,18 @@ const ServiceHighlights = () => {
       {highlights.map((item) => (
         <article
           key={item.title}
-          className="flex items-center gap-3 rounded-lg border border-[#e8edf2] bg-[#f7f9fb] px-4 py-3"
+          className="flex items-center gap-3 rounded-lg border border-[#e8edf2] bg-white px-4 py-3"
         >
-          <div className="shrink-0 rounded-md bg-[#edf8f2] p-2">{item.icon}</div>
+          <div className="shrink-0 rounded-md  p-2">
+            <Image
+              src={item.image}
+              alt={item.title}
+              width={50}
+              height={50}
+              unoptimized
+              className="size-12 object-contain"
+            />
+          </div>
           <div>
             <h3 className="text-sm font-semibold text-[#253d4e] leading-tight">
               {item.title}
