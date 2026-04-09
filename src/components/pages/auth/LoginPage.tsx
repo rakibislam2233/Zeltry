@@ -12,7 +12,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-3xl border border-[#e6ebf1] bg-white p-6 sm:p-8">
+    <div className="mx-auto mt-4 sm:mt-6 w-full max-w-md rounded-3xl border border-[#e6ebf1] bg-white p-6 sm:p-8">
       <div className="space-y-8">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#253d4e] mb-2">

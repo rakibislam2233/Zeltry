@@ -7,7 +7,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
     <section className="flex min-h-screen flex-col bg-background font-sans antialiased">
       <Navbar />
       {/* Main Content Area with Fixed Sidebar */}
-      <div className="container mx-auto px-4 py-6 mt-36 ">{children}</div>
+      <div className="container mx-auto px-4 py-6 mt-36">{children}</div>
 
       <Footer />
     </section>

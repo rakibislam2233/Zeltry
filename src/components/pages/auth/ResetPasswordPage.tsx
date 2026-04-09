@@ -12,7 +12,7 @@ const ResetPasswordPage = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className="mx-auto w-full max-w-md rounded-3xl border border-[#e6ebf1] bg-white p-6 sm:p-8">
+        <div className="mx-auto mt-4 sm:mt-6 w-full max-w-md rounded-3xl border border-[#e6ebf1] bg-white p-6 sm:p-8">
             <div className="space-y-8">
                 <div className="flex justify-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary">
