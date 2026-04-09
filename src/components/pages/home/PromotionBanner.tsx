@@ -4,7 +4,7 @@ const PromotionBanner: React.FC = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {/* Banner 1 - Large */}
-      <div className="col-span-1 lg:col-span-2 relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-card">
+      <div className="col-span-1 lg:col-span-2 relative h-64 rounded overflow-hidden group cursor-pointer shadow-card">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
@@ -21,14 +21,14 @@ const PromotionBanner: React.FC = () => {
             Fresh Fruit Collection
           </h2>
           <p className="text-gray-200 mb-6">Up to 30% Off</p>
-          <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-colors shadow-lg">
+          <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded font-bold text-sm transition-colors shadow-lg">
             Shop Now
           </button>
         </div>
       </div>
 
       {/* Banner 2 - Medium */}
-      <div className="col-span-1 relative h-64 rounded-xl overflow-hidden group cursor-pointer bg-orange-50 shadow-card">
+      <div className="col-span-1 relative h-64 rounded overflow-hidden group cursor-pointer bg-orange-50 shadow-card">
         <div className="absolute right-0 bottom-0 w-32 h-32 opacity-80"></div>
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -45,14 +45,14 @@ const PromotionBanner: React.FC = () => {
             </h3>
             <p className="text-white/80 text-sm">Starting at $5</p>
           </div>
-          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded-lg font-bold text-xs self-start transition-colors">
+          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded font-bold text-xs self-start transition-colors">
             View All
           </button>
         </div>
       </div>
 
       {/* Banner 3 - Medium */}
-      <div className="col-span-1 relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-card">
+      <div className="col-span-1 relative h-64 rounded overflow-hidden group cursor-pointer shadow-card">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{
@@ -71,7 +71,7 @@ const PromotionBanner: React.FC = () => {
             </h3>
             <p className="text-white/80 text-sm">Get 20% Cashback</p>
           </div>
-          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded-lg font-bold text-xs self-start transition-colors">
+          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded font-bold text-xs self-start transition-colors">
             Shop Now
           </button>
         </div>

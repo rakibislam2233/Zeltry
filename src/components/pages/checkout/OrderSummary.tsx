@@ -1,7 +1,7 @@
 
 const OrderSummary = () => {
     return (
-        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm">
+        <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 shadow-sm">
             <h2 className="text-lg font-bold text-text-main dark:text-white mb-6">Order Summary</h2>
 
             <div className="flex flex-col gap-4 mb-6">

@@ -92,7 +92,7 @@ const ShopPage = () => {
             <Breadcrumb items={[{ label: 'Shop', href: '/shop' }, { label: 'Electronics' }]} />
 
             {/* Banner */}
-            <div className="w-full h-48 md:h-64 rounded-xl relative overflow-hidden mb-8 shadow-card group">
+            <div className="w-full h-48 md:h-64 rounded relative overflow-hidden mb-8 shadow-card group">
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=2000&auto=format&fit=crop')" }} // Electronics banner
@@ -104,7 +104,7 @@ const ShopPage = () => {
             </div>
 
             {/* Sort Bar */}
-            <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-lg p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p className="text-sm text-text-muted">Showing 1–9 of 120 results</p>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                     <div className="flex items-center gap-2 text-sm font-medium mr-auto sm:mr-0">

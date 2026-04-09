@@ -9,7 +9,7 @@ const AccountDetailsPage = () => {
                 <p className="text-text-muted text-sm">Update your profile and password</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
+            <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 sm:p-8 shadow-sm">
                 <form className="space-y-8">
                     {/* Profile Photo */}
                     <div className="flex flex-col sm:flex-row items-center gap-6 pb-8 border-b border-gray-200 dark:border-gray-800">
@@ -35,7 +35,7 @@ const AccountDetailsPage = () => {
                             <input
                                 type="text"
                                 defaultValue="Alex"
-                                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                             />
                         </div>
                         <div className="space-y-2">
@@ -43,7 +43,7 @@ const AccountDetailsPage = () => {
                             <input
                                 type="text"
                                 defaultValue="Doe"
-                                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                             />
                         </div>
                         <div className="space-y-2">
@@ -51,7 +51,7 @@ const AccountDetailsPage = () => {
                             <input
                                 type="email"
                                 defaultValue="alex.doe@example.com"
-                                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                             />
                         </div>
                         <div className="space-y-2">
@@ -59,7 +59,7 @@ const AccountDetailsPage = () => {
                             <input
                                 type="tel"
                                 defaultValue="+1 (555) 123-4567"
-                                className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                             />
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const AccountDetailsPage = () => {
                                 <input
                                     type="password"
                                     placeholder="••••••••"
-                                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                    className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                                 />
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -82,7 +82,7 @@ const AccountDetailsPage = () => {
                                     <input
                                         type="password"
                                         placeholder="••••••••"
-                                        className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                        className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -90,7 +90,7 @@ const AccountDetailsPage = () => {
                                     <input
                                         type="password"
                                         placeholder="••••••••"
-                                        className="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                        className="w-full px-4 py-2.5 rounded border border-gray-200 dark:border-gray-700 bg-transparent focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                                     />
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ const AccountDetailsPage = () => {
                     </div>
 
                     <div className="pt-4 flex justify-end">
-                        <button type="button" className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-all shadow-md shadow-primary/20">
+                        <button type="button" className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-dark transition-all shadow-md shadow-primary/20">
                             <Save className="w-5 h-5" />
                             Save Changes
                         </button>

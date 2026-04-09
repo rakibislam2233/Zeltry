@@ -1,10 +1,10 @@
 
-import React from 'react';
 import { Mail } from 'lucide-react';
+import React from 'react';
 
 const Newsletter: React.FC = () => {
     return (
-        <section className="mt-10 bg-primary rounded-xl p-8 relative overflow-hidden">
+        <section className="mt-10 bg-primary rounded p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
@@ -17,7 +17,7 @@ const Newsletter: React.FC = () => {
                     </div>
                 </div>
                 <div className="w-full md:max-w-md">
-                    <div className="flex bg-white rounded-lg p-1.5 overflow-hidden">
+                    <div className="flex bg-white rounded p-1.5 overflow-hidden">
                         <input
                             className="flex-1 border-none focus:ring-0 px-4 text-text-main outline-none"
                             placeholder="Your email address"

@@ -9,7 +9,7 @@ const AddressesPage = () => {
                     <h2 className="text-2xl font-bold text-text-main dark:text-white">Addresses</h2>
                     <p className="text-text-muted text-sm">Manage your billing and shipping addresses</p>
                 </div>
-                <button className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-primary-dark transition-colors shadow-md shadow-primary/20">
+                <button className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded font-bold text-sm hover:bg-primary-dark transition-colors shadow-md shadow-primary/20">
                     <Plus className="w-4 h-4" />
                     Add New Address
                 </button>
@@ -17,7 +17,7 @@ const AddressesPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Billing Address */}
-                <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm relative group">
+                <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 shadow-sm relative group">
                     <div className="flex items-center justify-between mb-4">
                         <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-wider">Billing Address</span>
                         <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -44,7 +44,7 @@ const AddressesPage = () => {
                 </div>
 
                 {/* Shipping Address */}
-                <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm relative group">
+                <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 shadow-sm relative group">
                     <div className="flex items-center justify-between mb-4">
                         <span className="text-xs font-bold text-secondary bg-secondary/10 px-2 py-1 rounded uppercase tracking-wider">Shipping Address</span>
                         <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">

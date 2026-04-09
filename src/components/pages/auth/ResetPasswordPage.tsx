@@ -28,7 +28,7 @@ const ResetPasswordPage = () => {
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Enter new password"
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                                    className="w-full px-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
                                 />
                                 <button
                                     type="button"
@@ -46,7 +46,7 @@ const ResetPasswordPage = () => {
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Re-enter new password"
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                                    className="w-full px-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
                                 />
                             </div>
                         </div>
@@ -80,7 +80,7 @@ const ResetPasswordPage = () => {
                         </div>
                     </div>
 
-                    <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
+                    <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
                         Reset Password
                     </button>
 

@@ -88,7 +88,7 @@ const ShopSidebar = () => {
             onChange={(e) =>
               setPriceRange([priceRange[0], parseInt(e.target.value)])
             }
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
+            className="w-full h-2 bg-gray-200 rounded appearance-none cursor-pointer accent-primary"
           />
           <div className="flex items-center justify-between mt-4">
             <span className="text-sm font-medium text-text-main dark:text-white">
@@ -147,7 +147,7 @@ const ShopSidebar = () => {
       </div>
 
       {/* Sale Banner Small */}
-      <div className="mt-4 rounded-xl overflow-hidden relative h-80 group cursor-pointer shadow-lg">
+      <div className="mt-4 rounded overflow-hidden relative h-80 group cursor-pointer shadow-lg">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{

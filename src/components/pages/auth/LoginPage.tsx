@@ -44,7 +44,7 @@ const LoginPage = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                    className="w-full pl-12 pr-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
                   />
                 </div>
               </div>
@@ -78,7 +78,7 @@ const LoginPage = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
-                    className="w-full pl-12 pr-12 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                    className="w-full pl-12 pr-12 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
                   />
                   <button
                     type="button"
@@ -127,7 +127,7 @@ const LoginPage = () => {
               </Link>
             </div>
 
-            <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
+            <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
               Log In
             </button>
           </form>
@@ -144,7 +144,7 @@ const LoginPage = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
               <img
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 alt="Google"
@@ -154,7 +154,7 @@ const LoginPage = () => {
                 Google
               </span>
             </button>
-            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
               <Facebook
                 className="w-5 h-5 text-[#1877F2]"
                 fill="currentColor"

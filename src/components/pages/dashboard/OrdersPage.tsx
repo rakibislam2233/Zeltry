@@ -59,7 +59,7 @@ const OrdersPage = () => {
         <div className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <h2 className="text-2xl font-bold text-text-main dark:text-white">My Orders</h2>
-                <div className="flex bg-gray-100 dark:bg-gray-800 p-1 rounded-lg overflow-x-auto no-scrollbar">
+                <div className="flex bg-gray-100 dark:bg-gray-800 p-1 rounded overflow-x-auto no-scrollbar">
                     {tabs.map(tab => (
                         <button
                             key={tab}
@@ -78,10 +78,10 @@ const OrdersPage = () => {
             <div className="space-y-4">
                 {filteredOrders.length > 0 ? (
                     filteredOrders.map(order => (
-                        <div key={order.id} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div key={order.id} className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 shadow-sm hover:shadow-md transition-shadow">
                             <div className="flex flex-col md:flex-row gap-6">
                                 {/* Image */}
-                                <div className="w-20 h-20 flex-shrink-0 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center p-2">
+                                <div className="w-20 h-20 flex-shrink-0 bg-gray-50 dark:bg-gray-800 rounded overflow-hidden flex items-center justify-center p-2">
                                     <img src={order.image} alt={order.product} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
                                 </div>
 
@@ -107,7 +107,7 @@ const OrdersPage = () => {
                                             <span className="font-bold text-lg text-primary">${order.total.toFixed(2)}</span>
                                             <span className="text-xs text-text-muted">{order.items} Items</span>
                                         </div>
-                                        <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-all w-full md:w-auto justify-center">
+                                        <button className="flex items-center gap-2 px-4 py-2 rounded border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-all w-full md:w-auto justify-center">
                                             <Eye className="w-4 h-4" />
                                             View Details
                                         </button>
@@ -117,7 +117,7 @@ const OrdersPage = () => {
                         </div>
                     ))
                 ) : (
-                    <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
+                    <div className="text-center py-20 bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">
                         <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
                             <Package className="w-8 h-8 text-text-muted" />
                         </div>

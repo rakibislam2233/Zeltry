@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const CartTotals = () => {
     return (
-        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm h-fit">
+        <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 p-6 shadow-sm h-fit">
             <h2 className="text-lg font-bold text-text-main dark:text-white mb-6">Cart Total</h2>
 
             <div className="space-y-4 mb-6">

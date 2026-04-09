@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-800 p-4  transition-all duration-300 group relative flex flex-col h-full">
+    <div className="bg-surface-light dark:bg-surface-dark rounded border border-gray-200 dark:border-gray-800 p-4  transition-all duration-300 group relative flex flex-col h-full">
       {product.badge && (
         <span
           className={`absolute top-4 left-4 text-white text-[10px] font-bold px-2.5 py-1 rounded-full ${product.badge.colorClass} z-10 shadow-sm`}
@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
       <Link
         href={`/product/${product.id}`}
-        className="block relative w-full aspect-square mb-4 rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-800/50 md:flex items-center justify-center p-6 cursor-pointer"
+        className="block relative w-full aspect-square mb-4 rounded overflow-hidden bg-gray-50 dark:bg-gray-800/50 md:flex items-center justify-center p-6 cursor-pointer"
       >
         <img
           src={product.image}

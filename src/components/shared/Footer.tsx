@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Twitter, Instagram, Youtube, Mail } from "lucide-react";
+import { Facebook, Instagram, Mail, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import Logo from "./Logo";
@@ -129,7 +129,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full pl-10 pr-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg focus:border-teal-500 focus:outline-none text-white"
+                  className="w-full pl-10 pr-4 py-2.5 bg-gray-800 border border-gray-700 rounded focus:border-teal-500 focus:outline-none text-white"
                 />
               </div>
               <Button type="submit" variant="default">

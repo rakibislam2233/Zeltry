@@ -24,12 +24,12 @@ const VerifyEmailPage = () => {
                                 key={i}
                                 type="text" 
                                 maxLength={1}
-                                className="w-10 h-10 sm:w-12 sm:h-12 text-center text-xl font-bold rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
+                                className="w-10 h-10 sm:w-12 sm:h-12 text-center text-xl font-bold rounded border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all dark:text-white"
                             />
                         ))}
                     </div>
 
-                    <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
+                    <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 rounded transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-[0.98]">
                         Verify Account
                     </button>
                     
