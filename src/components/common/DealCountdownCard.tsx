@@ -1,4 +1,4 @@
-import { ShoppingCart, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Link from "next/link";
 
 type DealCountdownCardProps = {
@@ -62,7 +62,7 @@ const DealCountdownCard = ({
             </span>
           </div>
 
-          <div className="mt-3 flex items-end justify-between gap-2">
+          <div className="mt-3">
             <div className="flex items-end gap-1.5">
               <span className="text-xl font-extrabold tracking-tight text-primary">
                 ${price.toFixed(2)}
@@ -76,10 +76,12 @@ const DealCountdownCard = ({
               </span>
             </div>
 
-            <button className="h-8 px-3 rounded-md cursor-pointer bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center gap-1 transition-colors">
-              <ShoppingCart className="w-3.5 h-3.5" />
-              Add
-            </button>
+            <Link
+              href={`/product/${id}`}
+              className="mt-2 h-8 px-3 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center transition-colors"
+            >
+              View details
+            </Link>
           </div>
         </div>
       </div>

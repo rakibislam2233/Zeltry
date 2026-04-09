@@ -1,12 +1,10 @@
 import {
-  Beef,
-  Candy,
   Grape,
   Milk,
   Package,
   Shirt,
   SlidersHorizontal,
-  Wheat,
+  Wheat
 } from "lucide-react";
 
 type Category = {
@@ -31,8 +29,8 @@ const newProducts = [
 
 const BrowseCategories = () => {
   return (
-    <aside className="w-70 shrink-0 hidden lg:flex flex-col gap-5">
-      <div className="rounded-xl border border-gray-200 bg-white p-4">
+    <aside className="w-70 shrink-0 hidden lg:flex flex-col gap-4">
+      <div className="rounded-xl border border-[#e6ecf2] bg-white p-4 shadow-sm">
         <h3 className="text-[22px] font-bold text-[#253d4e]">Category</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
@@ -41,7 +39,7 @@ const BrowseCategories = () => {
             <button
               type="button"
               key={category.name}
-              className="w-full rounded border border-gray-200 px-3 py-2.5 flex items-center justify-between hover:border-primary/40 hover:bg-[#f7fff9] transition-colors"
+              className="w-full rounded-xl border border-[#e4e9ef] px-3 py-2.5 flex items-center justify-between hover:border-primary/40 hover:bg-[#f7fff9] transition-colors"
             >
               <span className="inline-flex items-center gap-2 text-sm text-[#4f5d77]">
                 <span className="text-primary">{category.icon}</span>
@@ -55,7 +53,7 @@ const BrowseCategories = () => {
         </div>
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white p-4">
+      <div className="rounded-xl border border-[#e6ecf2] bg-white p-4 shadow-sm">
         <h3 className="text-[22px] font-bold text-[#253d4e]">Fill by price</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
@@ -99,21 +97,21 @@ const BrowseCategories = () => {
 
         <button
           type="button"
-          className="mt-5 h-9 px-4 rounded-md bg-primary text-white text-sm font-semibold inline-flex items-center gap-2 hover:bg-[#2ca36b] transition-colors"
+          className="mt-5 h-9 px-4 rounded-xl bg-primary text-white text-sm font-semibold inline-flex items-center gap-2 hover:bg-[#2ca36b] transition-colors"
         >
           <SlidersHorizontal className="h-4 w-4" />
           Filter
         </button>
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white p-4">
+      <div className="rounded-xl border border-[#e6ecf2] bg-white p-4 shadow-sm">
         <h3 className="text-[22px] font-bold text-[#253d4e]">New products</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
         <div className="mt-4 space-y-4">
           {newProducts.map((product) => (
-            <article key={product.name} className="flex items-center gap-3">
-              <div className="h-14 w-14 rounded bg-[#f6f6f6] border border-gray-200 flex items-center justify-center text-2xl">
+            <article key={product.name} className="flex items-center gap-3 rounded-xl border border-[#eef2f6] p-2 hover:bg-[#fafcfe] transition-colors">
+              <div className="h-14 w-14 rounded-xl bg-[#f6f6f6] border border-gray-200 flex items-center justify-center text-2xl">
                 {product.emoji}
               </div>
               <div>

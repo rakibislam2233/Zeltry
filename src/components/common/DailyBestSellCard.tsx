@@ -1,4 +1,4 @@
-import { ShoppingCart, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Link from "next/link";
 
 type DailyBestSellCardProps = {
@@ -81,10 +81,12 @@ const DailyBestSellCard = ({
           </span>
         </div>
 
-        <button className="mt-3 h-8 w-full rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center gap-1 transition-colors">
-          <ShoppingCart className="h-3.5 w-3.5" />
-          Add To Cart
-        </button>
+        <Link
+          href={`/product/${id}`}
+          className="mt-3 h-8 w-full rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center transition-colors"
+        >
+          View details
+        </Link>
       </div>
     </article>
   );

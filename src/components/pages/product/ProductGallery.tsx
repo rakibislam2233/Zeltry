@@ -4,47 +4,44 @@ import { useState } from 'react';
 
 const ProductGallery = () => {
     const images = [
-        'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop', // Watch Main
-        'https://images.unsplash.com/photo-1544117519-31a4b719223d?q=80&w=1000&auto=format&fit=crop', // Watch Side
-        'https://images.unsplash.com/photo-1579586337278-3c971ba30fb0?q=80&w=1000&auto=format&fit=crop', // Watch Detail
-        'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=1000&auto=format&fit=crop' // Watch Lifestyle
+        'https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1000&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1000&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop'
     ];
     const [selectedImage, setSelectedImage] = useState(0);
 
     return (
         <div className="flex flex-col gap-4">
-            {/* Main Image */}
-            <div className="relative aspect-square md:aspect-4/3 bg-white rounded border border-gray-200 dark:border-gray-800 p-8 flex items-center justify-center overflow-hidden group">
+            <div className="relative rounded-xl border border-[#e5e9ef] bg-white p-4">
                 <img
                     src={images[selectedImage]}
                     alt="Product"
-                    className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transition-transform duration-500 group-hover:scale-110"
+                    className="h-[360px] w-full rounded-lg object-cover"
                 />
 
-                {/* Navigation Arrows (Optional, but good for UX) */}
                 <button
                     onClick={() => setSelectedImage(prev => prev === 0 ? images.length - 1 : prev - 1)}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute left-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] hover:text-primary transition-colors"
                 >
                     <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                     onClick={() => setSelectedImage(prev => prev === images.length - 1 ? 0 : prev + 1)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute right-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] hover:text-primary transition-colors"
                 >
                     <ChevronRight className="w-5 h-5" />
                 </button>
             </div>
 
-            {/* Thumbnails */}
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-5 gap-3">
                 {images.map((img, idx) => (
                     <div
                         key={idx}
                         onClick={() => setSelectedImage(idx)}
-                        className={`aspect-square bg-white rounded border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary ring-1 ring-primary' : 'border-gray-200 dark:border-gray-800 hover:border-primary/50'}`}
+                        className={`aspect-square bg-white rounded-xl border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary' : 'border-[#e5e9ef] hover:border-primary/50'}`}
                     >
-                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
+                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-lg" />
                     </div>
                 ))}
             </div>
