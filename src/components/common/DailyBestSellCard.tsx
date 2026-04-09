@@ -25,8 +25,12 @@ const DailyBestSellCard = ({
   rating,
   price,
   originalPrice,
+  sold,
+  total,
   badge,
 }: DailyBestSellCardProps) => {
+  const soldPercent = Math.min(100, Math.round((sold / Math.max(total, 1)) * 100));
+
   return (
     <article className="relative rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 ">
       {badge && (
@@ -49,7 +53,7 @@ const DailyBestSellCard = ({
         <p className="text-xs text-[#9aa3af]">{category}</p>
         <Link
           href={`/product/${id}`}
-          className="mt-1 block line-clamp-2 text-sm sm:text-base leading-tight font-semibold text-[#253d4e] hover:text-primary"
+          className="mt-1 block line-clamp-2 text-sm sm:text-base leading-tight font-semibold text-[#253d4e]"
         >
           {name}
         </Link>
@@ -81,12 +85,17 @@ const DailyBestSellCard = ({
           </span>
         </div>
 
-        <Link
-          href={`/product/${id}`}
-          className="mt-3 h-8 w-full rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center transition-colors"
-        >
-          View details
-        </Link>
+        <div className="mt-3">
+          <div className="flex items-center justify-between text-[11px] text-[#6b7280]">
+            <span>
+              Sold: <span className="font-semibold text-[#253d4e]">{sold}</span>/{total}
+            </span>
+            <span className="font-semibold text-primary">{soldPercent}%</span>
+          </div>
+          <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[#eef2f6]">
+            <div className="h-full rounded-full bg-primary" style={{ width: `${soldPercent}%` }} />
+          </div>
+        </div>
       </div>
     </article>
   );

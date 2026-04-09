@@ -17,18 +17,18 @@ const ProductGallery = () => {
                 <img
                     src={images[selectedImage]}
                     alt="Product"
-                    className="h-[360px] w-full rounded-lg object-cover"
+                    className="h-[360px] w-full rounded-xl object-cover"
                 />
 
                 <button
                     onClick={() => setSelectedImage(prev => prev === 0 ? images.length - 1 : prev - 1)}
-                    className="absolute left-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] hover:text-primary transition-colors"
+                    className="absolute left-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] transition-colors"
                 >
                     <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                     onClick={() => setSelectedImage(prev => prev === images.length - 1 ? 0 : prev + 1)}
-                    className="absolute right-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] hover:text-primary transition-colors"
+                    className="absolute right-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 border border-[#e5e9ef] flex items-center justify-center text-[#4f5d77] transition-colors"
                 >
                     <ChevronRight className="w-5 h-5" />
                 </button>
@@ -39,9 +39,9 @@ const ProductGallery = () => {
                     <div
                         key={idx}
                         onClick={() => setSelectedImage(idx)}
-                        className={`aspect-square bg-white rounded-xl border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary' : 'border-[#e5e9ef] hover:border-primary/50'}`}
+                        className={`aspect-square bg-white rounded-xl border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary' : 'border-[#e5e9ef]'}`}
                     >
-                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-lg" />
+                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-xl" />
                     </div>
                 ))}
             </div>

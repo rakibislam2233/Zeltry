@@ -29,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <span className="text-xs text-[#8b96a5]">{product.category}</span>
         <Link
           href={`/product/${product.id}`}
-          className="font-bold text-lg leading-tight text-[#253d4e] hover:text-primary transition-colors line-clamp-2"
+          className="font-bold text-lg leading-tight text-[#253d4e] transition-colors line-clamp-2"
           title={product.name}
         >
           {product.name}
@@ -63,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             ({product.rating.toFixed(1)})
           </span>
         </div>
-        <div className="mt-auto flex justify-between items-center pt-2">
+        <div className="mt-auto pt-2">
           <div className="flex items-end gap-1.5">
             <span className="text-xl font-extrabold tracking-tight text-primary">
               ${product.price.toFixed(2)}
@@ -78,13 +78,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 : "$0.00"}
             </span>
           </div>
-
-          <Link
-            href={`/product/${product.id}`}
-            className="mt-2 h-8 px-3 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center transition-colors"
-          >
-            View details
-          </Link>
         </div>
       </div>
     </article>

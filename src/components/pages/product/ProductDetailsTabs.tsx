@@ -16,7 +16,7 @@ const ProductDetailsTabs = () => {
           className={`pb-3 font-semibold transition-colors ${
             activeTab === "description"
               ? "border-b-2 border-primary text-primary"
-              : "text-[#7b8897] hover:text-[#253d4e]"
+              : "text-[#7b8897]"
           }`}
         >
           Description
@@ -27,7 +27,7 @@ const ProductDetailsTabs = () => {
           className={`pb-3 font-semibold transition-colors ${
             activeTab === "additional"
               ? "border-b-2 border-primary text-primary"
-              : "text-[#7b8897] hover:text-[#253d4e]"
+              : "text-[#7b8897]"
           }`}
         >
           Additional info
@@ -38,7 +38,7 @@ const ProductDetailsTabs = () => {
           className={`pb-3 font-semibold transition-colors ${
             activeTab === "reviews"
               ? "border-b-2 border-primary text-primary"
-              : "text-[#7b8897] hover:text-[#253d4e]"
+              : "text-[#7b8897]"
           }`}
         >
           Reviews (3)

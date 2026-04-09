@@ -53,7 +53,7 @@ const ProductInfo = () => {
                         <button
                             key={option}
                             type="button"
-                            className={`h-8 rounded-lg border px-3 text-xs font-semibold transition-colors ${idx === 1 ? 'border-primary bg-[#effcf5] text-primary' : 'border-[#e4e9ef] text-[#4f5d77] hover:border-primary/40'}`}
+                            className={`h-8 rounded-xl border px-3 text-xs font-semibold transition-colors ${idx === 1 ? 'border-primary bg-[#effcf5] text-primary' : 'border-[#e4e9ef] text-[#4f5d77]'}`}
                         >
                             {option}
                         </button>
@@ -65,24 +65,24 @@ const ProductInfo = () => {
                 <div className="flex items-center border border-[#e1e7ee] rounded-xl h-12 w-fit bg-white">
                     <button
                         onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                        className="w-12 h-full flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+                        className="w-12 h-full flex items-center justify-center text-gray-500 transition-colors"
                     >
                         <Minus className="w-4 h-4" />
                     </button>
                     <span className="w-8 text-center font-bold text-[#253d4e]">{quantity}</span>
                     <button
                         onClick={() => setQuantity(q => q + 1)}
-                        className="w-12 h-full flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+                        className="w-12 h-full flex items-center justify-center text-gray-500 transition-colors"
                     >
                         <Plus className="w-4 h-4" />
                     </button>
                 </div>
 
-                <button className="flex-1 bg-primary hover:bg-[#2ca36b] text-white font-bold rounded-xl h-12 px-8 transition-all flex items-center justify-center gap-2">
+                <button className="flex-1 bg-primary text-white font-bold rounded-xl h-12 px-8 transition-all flex items-center justify-center gap-2">
                     Add to Cart <span className="hidden sm:inline">- ${(38 * quantity).toFixed(2)}</span>
                 </button>
 
-                <button className="h-12 w-12 rounded-xl border border-[#e1e7ee] bg-white flex items-center justify-center text-gray-500 hover:text-red-500 hover:border-red-500 transition-all">
+                <button className="h-12 w-12 rounded-xl border border-[#e1e7ee] bg-white flex items-center justify-center text-gray-500 transition-all">
                     <Heart className="w-5 h-5" />
                 </button>
             </div>
@@ -99,16 +99,16 @@ const ProductInfo = () => {
             <div className="flex items-center gap-2">
                 <span className="text-sm font-bold text-[#253d4e]">Share item:</span>
                 <div className="flex gap-2">
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition-colors">
+                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 transition-colors">
                         <Facebook className="w-4 h-4" />
                     </button>
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-blue-400 hover:text-white transition-colors">
+                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 transition-colors">
                         <Twitter className="w-4 h-4" />
                     </button>
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-blue-700 hover:text-white transition-colors">
+                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 transition-colors">
                         <Linkedin className="w-4 h-4" />
                     </button>
-                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-green-500 hover:text-white transition-colors">
+                    <button className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 transition-colors">
                         <Share2 className="w-4 h-4" />
                     </button>
                 </div>

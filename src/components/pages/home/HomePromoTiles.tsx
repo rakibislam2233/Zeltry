@@ -1,4 +1,5 @@
 import { promoTiles } from "@/data/home/promoTiles";
+import Image from "next/image";
 import Link from "next/link";
 
 const HomePromoTiles = () => {
@@ -20,9 +21,11 @@ const HomePromoTiles = () => {
             {tile.cta}
           </Link>
 
-          <img
+          <Image
             src={tile.image}
             alt={tile.title}
+            width={112}
+            height={96}
             className="pointer-events-none absolute bottom-0 right-0 h-24 w-28 rounded-tl-xl object-cover"
           />
         </article>

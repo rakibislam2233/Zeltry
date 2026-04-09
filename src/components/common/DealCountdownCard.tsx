@@ -42,14 +42,21 @@ const DealCountdownCard = ({
       </Link>
 
       <div className="w-full p-3 -mt-24">
-        <div className="w-full relative z-10 rounded-lg border border-[#eceff3] bg-white p-3">
-          <p className="text-[11px] text-[#8b96a5]">{category}</p>
+        <div className="w-full relative z-10 rounded-xl border border-[#eceff3] bg-white p-3">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[11px] text-[#8b96a5]">{category}</p>
+            <span className="rounded-full bg-[#fff3e8] px-2 py-0.5 text-[10px] font-semibold text-[#f59e0b]">
+              {countdownLabel} left
+            </span>
+          </div>
           <Link
             href={`/product/${id}`}
-            className="mt-1 block line-clamp-2 text-[13px] leading-tight font-semibold text-[#2b2b2b] hover:text-primary"
+            className="mt-1 block line-clamp-2 text-[13px] leading-tight font-semibold text-[#2b2b2b]"
           >
             {name}
           </Link>
+
+          <p className="mt-1 text-[11px] text-[#8b96a5]">by {brand}</p>
 
           <div className="mt-2 flex items-center gap-1 text-[#ffb400]">
             <Star className="h-3 w-3 fill-current" />
@@ -75,13 +82,6 @@ const DealCountdownCard = ({
                 {originalPrice ? `$${originalPrice.toFixed(2)}` : "$0.00"}
               </span>
             </div>
-
-            <Link
-              href={`/product/${id}`}
-              className="mt-2 h-8 px-3 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center justify-center transition-colors"
-            >
-              View details
-            </Link>
           </div>
         </div>
       </div>
