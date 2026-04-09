@@ -1,5 +1,9 @@
 "use client";
 
+import {
+    authInputWithBothIconsClass,
+    authInputWithLeftIconClass,
+} from "@/components/forms/authFieldStyles";
 import { Eye, EyeOff, Facebook, Mail, User } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,43 +23,43 @@ const RegisterPage = () => {
                 <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-[#253d4e]">First Name</label>
+                            <label className="text-sm font-medium text-text-main">First Name</label>
                             <div className="relative">
                                 <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                                 <input
                                     type="text"
                                     placeholder="John"
-                                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                    className={authInputWithLeftIconClass}
                                 />
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-[#253d4e]">Last Name</label>
+                            <label className="text-sm font-medium text-text-main">Last Name</label>
                             <div className="relative">
                                 <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                                 <input
                                     type="text"
                                     placeholder="Doe"
-                                    className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                    className={authInputWithLeftIconClass}
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-[#253d4e]">Email Address</label>
+                        <label className="text-sm font-medium text-text-main">Email Address</label>
                         <div className="relative">
                             <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                             <input
                                 type="email"
                                 placeholder="john.doe@example.com"
-                                className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                className={authInputWithLeftIconClass}
                             />
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-[#253d4e]">Password</label>
+                        <label className="text-sm font-medium text-text-main">Password</label>
                         <div className="relative">
                             <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
@@ -63,7 +67,7 @@ const RegisterPage = () => {
                             <input
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Create a password"
-                                className="w-full pl-12 pr-12 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                className={authInputWithBothIconsClass}
                             />
                             <button
                                 type="button"
@@ -76,7 +80,7 @@ const RegisterPage = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-[#253d4e]">Confirm Password</label>
+                        <label className="text-sm font-medium text-text-main">Confirm Password</label>
                         <div className="relative">
                             <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M3 22v-6h6"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>
@@ -84,7 +88,7 @@ const RegisterPage = () => {
                             <input
                                 type={showConfirmPassword ? "text" : "password"}
                                 placeholder="Confirm your password"
-                                className="w-full pl-12 pr-12 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                className={authInputWithBothIconsClass}
                             />
                             <button
                                 type="button"

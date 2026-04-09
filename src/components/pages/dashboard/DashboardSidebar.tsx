@@ -1,18 +1,37 @@
+"use client";
+
 import {
-  Heart,
-  LayoutDashboard,
-  LogOut,
-  MapPin,
-  RefreshCw,
-  Settings,
+    Heart,
+    LayoutDashboard,
+    LogOut,
+    MapPin,
+    RefreshCw,
+    Settings,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/dashboard/orders", label: "Order History", icon: RefreshCw },
+  { href: "/dashboard/wishlist", label: "Wishlist", icon: Heart },
+  { href: "/dashboard/addresses", label: "Addresses", icon: MapPin },
+  { href: "/dashboard/account", label: "Account Details", icon: Settings },
+];
 
 const DashboardSidebar = () => {
-  // We can use usePathname here if we mark as client component or just use Links
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/dashboard") {
+      return pathname === "/dashboard";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   return (
-    <aside className="w-full lg:w-[280px] bg-white rounded border border-gray-200 overflow-hidden h-fit">
+    <aside className="w-full lg:w-70 bg-white rounded border border-gray-200 overflow-hidden h-fit">
       <div className="p-6 text-center border-b border-gray-200">
         <div className="w-20 h-20 mx-auto rounded-full bg-gray-100 mb-4 overflow-hidden border-2 border-primary">
           <img
@@ -26,41 +45,25 @@ const DashboardSidebar = () => {
       </div>
 
       <nav className="p-4 flex flex-col gap-1">
-        <Link
-          href="/dashboard"
-          className="flex items-center gap-3 px-4 py-3 rounded bg-primary/10 text-primary font-medium transition-colors"
-        >
-          <LayoutDashboard className="w-5 h-5" />
-          Dashboard
-        </Link>
-        <Link
-          href="/dashboard/orders"
-          className="flex items-center gap-3 px-4 py-3 rounded text-text-muted transition-colors"
-        >
-          <RefreshCw className="w-5 h-5" />
-          Order History
-        </Link>
-        <Link
-          href="/dashboard/wishlist"
-          className="flex items-center gap-3 px-4 py-3 rounded text-text-muted transition-colors"
-        >
-          <Heart className="w-5 h-5" />
-          Wishlist
-        </Link>
-        <Link
-          href="/dashboard/addresses"
-          className="flex items-center gap-3 px-4 py-3 rounded text-text-muted transition-colors"
-        >
-          <MapPin className="w-5 h-5" />
-          Addresses
-        </Link>
-        <Link
-          href="/dashboard/account"
-          className="flex items-center gap-3 px-4 py-3 rounded text-text-muted transition-colors"
-        >
-          <Settings className="w-5 h-5" />
-          Account Details
-        </Link>
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          const active = isActive(item.href);
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex items-center gap-3 px-4 py-3 rounded transition-colors ${
+                active
+                  ? "bg-primary/10 text-primary font-medium"
+                  : "text-text-muted"
+              }`}
+            >
+              <Icon className="w-5 h-5" />
+              {item.label}
+            </Link>
+          );
+        })}
         <Link
           href="/"
           className="flex items-center gap-3 px-4 py-3 rounded text-text-muted transition-colors mt-4"

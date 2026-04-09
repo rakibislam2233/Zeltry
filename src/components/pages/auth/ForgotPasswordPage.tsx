@@ -1,5 +1,6 @@
 "use client";
 
+import { authInputWithLeftIconClass } from "@/components/forms/authFieldStyles";
 import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ const ForgotPasswordPage = () => {
 
         <form className="space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-[#253d4e]">
+            <label className="text-sm font-medium text-text-main">
               Email Address
             </label>
             <div className="relative">
@@ -26,7 +27,7 @@ const ForgotPasswordPage = () => {
               <input
                 type="email"
                 placeholder="user@example.com"
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                className={authInputWithLeftIconClass}
               />
             </div>
           </div>

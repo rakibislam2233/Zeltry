@@ -1,5 +1,9 @@
 "use client";
 
+import {
+    authInputClass,
+    authInputWithBothIconsClass,
+} from "@/components/forms/authFieldStyles";
 import { ArrowLeft, Eye, EyeOff, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -24,12 +28,12 @@ const ResetPasswordPage = () => {
                 <form className="space-y-6">
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-[#253d4e]">New Password</label>
+                            <label className="text-sm font-medium text-text-main">New Password</label>
                             <div className="relative">
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Enter new password"
-                                    className="w-full px-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                    className={authInputWithBothIconsClass}
                                 />
                                 <button
                                     type="button"
@@ -42,12 +46,12 @@ const ResetPasswordPage = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-[#253d4e]">Confirm New Password</label>
+                            <label className="text-sm font-medium text-text-main">Confirm New Password</label>
                             <div className="relative">
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Re-enter new password"
-                                    className="w-full px-4 py-3 rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-[#253d4e]"
+                                    className={authInputClass}
                                 />
                             </div>
                         </div>

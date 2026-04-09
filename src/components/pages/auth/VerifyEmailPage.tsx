@@ -1,5 +1,6 @@
 "use client";
 
+import { authOtpInputClass } from "@/components/forms/authFieldStyles";
 import { ArrowLeft, Lock } from "lucide-react";
 import Link from "next/link";
 
@@ -25,7 +26,7 @@ const VerifyEmailPage = () => {
                                 key={i}
                                 type="text"
                                 maxLength={1}
-                                className="w-10 h-10 sm:w-12 sm:h-12 text-center text-xl font-bold rounded-xl border border-[#dce4ec] bg-[#f8fafc] focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-[#253d4e]"
+                                className={`w-10 h-10 sm:w-12 sm:h-12 ${authOtpInputClass}`}
                             />
                         ))}
                     </div>
