@@ -11,6 +11,8 @@ interface CartSheetProps {
   onOpenChange: (open: boolean) => void;
 }
 
+const SHEET_ANIMATION_MS = 500;
+
 const CartSheet = ({ open, onOpenChange }: CartSheetProps) => {
   const [cartItems, setCartItems] = useState<CartItem[]>(initialCartItems);
   const [isRendered, setIsRendered] = useState(open);
@@ -30,8 +32,15 @@ const CartSheet = ({ open, onOpenChange }: CartSheetProps) => {
       setIsVisible(false);
       closeTimerRef.current = window.setTimeout(() => {
         setIsRendered(false);
-      }, 220);
+      }, SHEET_ANIMATION_MS);
     }
+
+    return () => {
+      if (closeTimerRef.current) {
+        window.clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = null;
+      }
+    };
   }, [open]);
 
   useEffect(() => {
