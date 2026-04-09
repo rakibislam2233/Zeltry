@@ -32,7 +32,7 @@ const newProducts = [
 const BrowseCategories = () => {
   return (
     <aside className="w-70 shrink-0 hidden lg:flex flex-col gap-5">
-      <div className="rounded border border-gray-200 bg-white p-4">
+      <div className="rounded-xl border border-gray-200 bg-white p-4">
         <h3 className="text-[22px] font-bold text-[#253d4e]">Category</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
@@ -55,7 +55,7 @@ const BrowseCategories = () => {
         </div>
       </div>
 
-      <div className="rounded border border-gray-200 bg-white p-4">
+      <div className="rounded-xl border border-gray-200 bg-white p-4">
         <h3 className="text-[22px] font-bold text-[#253d4e]">Fill by price</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
@@ -106,7 +106,7 @@ const BrowseCategories = () => {
         </button>
       </div>
 
-      <div className="rounded border border-gray-200 bg-white p-4">
+      <div className="rounded-xl border border-gray-200 bg-white p-4">
         <h3 className="text-[22px] font-bold text-[#253d4e]">New products</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
@@ -122,12 +122,6 @@ const BrowseCategories = () => {
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="mt-5 rounded border border-dashed border-[#d7f1e2] bg-[#f7fff9] p-3 flex items-center justify-between">
-          <p className="text-sm font-semibold text-[#253d4e]">Weekly offer</p>
-          <Candy className="h-4 w-4 text-primary" />
-          <Beef className="h-4 w-4 text-primary" />
         </div>
       </div>
     </aside>

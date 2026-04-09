@@ -187,7 +187,10 @@ const TodayHotSale: React.FC = () => {
         className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
       >
         {products.map((product) => (
-          <div key={product.id} className="shrink-0 basis-5/6 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 snap-start">
+          <div
+            key={product.id}
+            className="shrink-0 basis-5/6 sm:basis-[calc((100%-1rem)/2)] lg:basis-[calc((100%-2rem)/3)] xl:basis-[calc((100%-3rem)/4)] snap-start"
+          >
             <ProductCard product={product} />
           </div>
         ))}

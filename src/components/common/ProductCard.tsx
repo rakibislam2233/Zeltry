@@ -11,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <article className="relative h-full rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
       {product.badge && (
         <span
-          className={`absolute top-2 left-2 text-white text-[11px] font-semibold px-6 py-1 rounded ${product.badge.colorClass} z-10`}
+          className={`absolute top-2 left-2 text-white text-[10px] font-semibold px-4 py-0.5 rounded ${product.badge.colorClass} z-10`}
         >
           {product.badge.text}
         </span>
@@ -21,21 +21,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover mix-blend-multiply transform"
+          className="w-full h-36 object-cover mix-blend-multiply transform"
         />
       </Link>
 
-      <div className="flex flex-col flex-1 gap-2.5 p-4">
-        <span className="text-sm text-[#8b96a5]">{product.category}</span>
+      <div className="flex flex-col flex-1 gap-2 p-3">
+        <span className="text-xs text-[#8b96a5]">{product.category}</span>
         <Link
           href={`/product/${product.id}`}
-          className="font-bold text-xl leading-tight text-[#253d4e] hover:text-primary transition-colors line-clamp-2"
+          className="font-bold text-lg leading-tight text-[#253d4e] hover:text-primary transition-colors line-clamp-2"
           title={product.name}
         >
           {product.name}
         </Link>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((star) => {
             const isFilled = star <= Math.floor(product.rating);
             const isHalf =
@@ -52,26 +52,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 }`}
               >
                 {isHalf ? (
-                  <StarHalf className="w-3 h-3 fill-current" />
+                  <StarHalf className="w-2.5 h-2.5 fill-current" />
                 ) : (
                   <Star
-                    className={`w-3 h-3 ${isFilled ? "fill-current" : ""}`}
+                    className={`w-2.5 h-2.5 ${isFilled ? "fill-current" : ""}`}
                   />
                 )}
               </span>
             );
           })}
-          <span className="text-sm text-[#9ca3af] ml-1">
+          <span className="text-xs text-[#9ca3af] ml-1">
             ({product.rating.toFixed(1)})
           </span>
         </div>
-        <div className="mt-auto pt-3 flex items-end justify-between gap-3">
-          <div className="flex items-end gap-2">
-            <span className="text-2xl font-extrabold tracking-tight text-primary">
+        <div className="mt-auto pt-2 flex items-end justify-between gap-2">
+          <div className="flex items-end gap-1.5">
+            <span className="text-xl font-extrabold tracking-tight text-primary">
               ${product.price.toFixed(2)}
             </span>
             <span
-              className={`text-sm text-[#9ca3af] line-through font-medium pb-1 ${
+              className={`text-xs text-[#9ca3af] line-through font-medium pb-0.5 ${
                 !product.originalPrice && "opacity-0"
               }`}
             >
@@ -81,8 +81,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </span>
           </div>
 
-          <button className="h-10 px-4 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-sm font-semibold inline-flex items-center gap-1.5 transition-colors">
-            <ShoppingCart className="w-4 h-4" />
+          <button className="h-8 px-3 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-xs font-semibold inline-flex items-center gap-1 transition-colors">
+            <ShoppingCart className="w-3.5 h-3.5" />
             Add
           </button>
         </div>
