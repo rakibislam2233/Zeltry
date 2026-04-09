@@ -1,9 +1,17 @@
+"use client";
+
+import { initialCartItems } from "@/data/cart";
 import { ChevronDown, Heart, Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import CartSheet from "../CartSheet";
 import Logo from "../Logo";
 
 const MainNavbar = () => {
+  const [isCartSheetOpen, setIsCartSheetOpen] = useState(false);
+
   return (
+    <>
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-white">
       <div className="flex items-center justify-between gap-8">
         <Logo />
@@ -37,15 +45,16 @@ const MainNavbar = () => {
               2
             </span>
           </Link>
-          <Link
-            href="/cart"
+          <button
+            type="button"
+            onClick={() => setIsCartSheetOpen(true)}
             className="flex items-center justify-center w-10 h-10 rounded-full  text-white relative transition-colors"
           >
             <ShoppingCart className="w-6 h-6" />
             <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white/90">
-              4
+              {initialCartItems.reduce((total, item) => total + item.quantity, 0)}
             </span>
-          </Link>
+          </button>
           <Link
             href="/dashboard"
             className="flex items-center justify-center w-10 h-10 rounded-full  text-white relative transition-colors"
@@ -55,6 +64,8 @@ const MainNavbar = () => {
         </div>
       </div>
     </div>
+    <CartSheet open={isCartSheetOpen} onOpenChange={setIsCartSheetOpen} />
+    </>
   );
 };
 
