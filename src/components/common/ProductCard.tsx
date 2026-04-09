@@ -1,5 +1,5 @@
 import { Product } from "@/types/product";
-import { Heart, ShoppingCart, Star, StarHalf } from "lucide-react";
+import { ShoppingCart, Star, StarHalf } from "lucide-react";
 import Link from "next/link";
 
 interface ProductCardProps {
@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <article className="relative h-full rounded border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
+    <article className="relative h-full rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
       {product.badge && (
         <span
           className={`absolute top-2 left-2 text-white text-[11px] font-semibold px-6 py-1 rounded ${product.badge.colorClass} z-10`}
@@ -17,18 +17,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </span>
       )}
 
-      <Link
-        href={`/product/${product.id}`}
-        className="block relative w-full aspect-square mb-4 overflow-hidden "
-      >
+      <Link href={`/product/${product.id}`}>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full  object-contain mix-blend-multiply transform"
+          className="w-full h-48 object-cover mix-blend-multiply transform"
         />
       </Link>
 
-      <div className="flex flex-col flex-1 gap-2.5 px-4 pb-4">
+      <div className="flex flex-col flex-1 gap-2.5 p-4">
         <span className="text-sm text-[#8b96a5]">{product.category}</span>
         <Link
           href={`/product/${product.id}`}

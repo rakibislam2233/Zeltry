@@ -1,7 +1,9 @@
+"use client";
+
 import ProductCard from "@/components/common/ProductCard";
 import { Product } from "@/types/product";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useRef } from "react";
 
 const products: Product[] = [
   {
@@ -46,30 +48,148 @@ const products: Product[] = [
     originalPrice: 4.0,
     badge: { text: "-10%", colorClass: "bg-orange-500" },
   },
+  {
+    id: "9",
+    category: "Snacks",
+    name: "Veggie Pops SuperSnack Sweet & Salty",
+    image:
+      "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    price: 4.85,
+    originalPrice: 5.28,
+    badge: { text: "NEW", colorClass: "bg-primary" },
+  },
+  {
+    id: "10",
+    category: "Vegetables",
+    name: "Foster Farms Takeout Crispy Classic",
+    image:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    price: 17.85,
+    originalPrice: 19.8,
+  },
+  {
+    id: "11",
+    category: "Pet Foods",
+    name: "Blue Diamond Almonds Lightly",
+    image:
+      "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    price: 23.85,
+    originalPrice: 26.0,
+    badge: { text: "-14%", colorClass: "bg-orange-500" },
+  },
+  {
+    id: "12",
+    category: "Coffee",
+    name: "Gorton's Beer Battered Fish Fillets",
+    image:
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    price: 23.85,
+    originalPrice: 25.8,
+    badge: { text: "HOT", colorClass: "bg-pink-500" },
+  },
+  {
+    id: "13",
+    category: "Cream",
+    name: "Haagen-Dazs Caramel Cone Ice Cream",
+    image:
+      "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop",
+    rating: 2.0,
+    price: 22.85,
+    originalPrice: 24.8,
+  },
+  {
+    id: "14",
+    category: "Meats",
+    name: "Canada Dry Ginger Ale - 2L Bottle",
+    image:
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop",
+    rating: 4.0,
+    price: 32.85,
+    originalPrice: 35.8,
+    badge: { text: "SALE", colorClass: "bg-sky-500" },
+  },
 ];
 
 const TodayHotSale: React.FC = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const slidePrevious = () => {
+    if (!sliderRef.current) return;
+    sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth * 0.85, behavior: "smooth" });
+  };
+
+  const slideNext = () => {
+    if (!sliderRef.current) return;
+    sliderRef.current.scrollBy({ left: sliderRef.current.clientWidth * 0.85, behavior: "smooth" });
+  };
+
+  const tabs = [
+    "All",
+    "Milks & Dairies",
+    "Coffes & Teas",
+    "Pet Foods",
+    "Meats",
+    "Vegetables",
+    "Fruits",
+  ];
+
   return (
     <section>
       <div className="flex items-center justify-between mb-6">
         <div className="relative">
-          <h2 className="text-xl md:text-2xl font-bold text-text-main dark:text-white">
-            Today's Hot Sale
+          <h2 className="text-xl md:text-[34px] font-bold tracking-tight text-[#253d4e]">
+            Popular Products
           </h2>
-          <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></div>
+          <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full" />
+
         </div>
-        <div className="flex gap-2">
-          <button className="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors">
-            <ArrowLeft className="w-4 h-4" />
+
+        <div className="hidden xl:flex items-center gap-4 text-[13px] text-[#5d6d7a]">
+          {tabs.map((tab, index) => (
+            <button
+              type="button"
+              key={tab}
+              className={`transition-colors hover:text-primary ${
+                index === 0 ? "text-primary font-semibold" : ""
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <div className="ml-4 flex items-center gap-2">
+          <button
+            type="button"
+            onClick={slidePrevious}
+            aria-label="Previous products"
+            className="h-9 w-9 rounded-full border border-[#dce3ea] bg-white text-[#5d6d7a] hover:bg-primary hover:border-primary hover:text-white transition-colors"
+          >
+            <ChevronLeft className="h-4 w-4 mx-auto" />
           </button>
-          <button className="w-8 h-8 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors">
-            <ArrowRight className="w-4 h-4" />
+          <button
+            type="button"
+            onClick={slideNext}
+            aria-label="Next products"
+            className="h-9 w-9 rounded-full border border-[#dce3ea] bg-white text-[#5d6d7a] hover:bg-primary hover:border-primary hover:text-white transition-colors"
+          >
+            <ChevronRight className="h-4 w-4 mx-auto" />
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+      <div
+        ref={sliderRef}
+        className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
+      >
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <div key={product.id} className="shrink-0 basis-5/6 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 snap-start">
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </section>

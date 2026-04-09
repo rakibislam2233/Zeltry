@@ -1,80 +1,123 @@
-import React from "react";
+"use client";
 
-const PromotionBanner: React.FC = () => {
+import { ChevronLeft, ChevronRight, SendHorizontal } from "lucide-react";
+import { useState } from "react";
+
+const banners = [
+  {
+    id: "newsletter",
+    title: "Don't miss amazing grocery deals",
+    subtitle: "Sign up for the daily newsletter",
+    bgClass: "bg-[#f3e9cf]",
+  },
+  {
+    id: "weekend",
+    title: "Weekend market specials are live now",
+    subtitle: "Fresh picks, extra discounts, limited stock",
+    bgClass: "bg-[#efe8d1]",
+  },
+  {
+    id: "delivery",
+    title: "Fast delivery on your daily essentials",
+    subtitle: "Order before 4PM and get same-day delivery",
+    bgClass: "bg-[#f2ead5]",
+  },
+];
+
+const PromotionBanner = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goToSlide = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  const goToPrevious = () => {
+    setActiveIndex((prev) => (prev === 0 ? banners.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setActiveIndex((prev) => (prev === banners.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {/* Banner 1 - Large */}
-      <div className="col-span-1 lg:col-span-2 relative h-64 rounded overflow-hidden group cursor-pointer shadow-card">
+    <section className="relative overflow-hidden rounded-xl border border-[#ece9dc]">
+      <div className="relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDun76H8K_kKSNVjUY5MP7ceY4uqHg42YPEAjYkPW4hiPqm2BGle7EbMKjDd-E2jI3HEQzzA94QmAMzb4K6NJsQxzG1c0Aku3rFa2k-UMJ0WuFEJ2Dv1gTTGZq7O1qrTqZKBCABtJfQ3hUsRH77BgYFNzYInjZOI6OM5EjHJ6S988qzYLYEaCD65Zx473JJnWeKCbqHBiHdgH6w1A-wIsaFeJDNsnVVaiVqjQ7GcgiIVviRLCxJAM90KC6_Evc-2_7MrYC8isotGVhZ')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-background-dark/80 to-transparent"></div>
-        <div className="absolute inset-0 p-8 flex flex-col justify-center items-start">
-          <span className="text-secondary font-bold text-sm mb-2 tracking-wider">
-            WEEKEND DEAL
-          </span>
-          <h2 className="text-white text-3xl font-bold mb-2 max-w-[200px]">
-            Fresh Fruit Collection
-          </h2>
-          <p className="text-gray-200 mb-6">Up to 30% Off</p>
-          <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded font-bold text-sm transition-colors shadow-lg">
-            Shop Now
-          </button>
+          className="flex transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {banners.map((banner) => (
+            <article
+              key={banner.id}
+              className={`relative min-w-full px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14 ${banner.bgClass}`}
+            >
+              <div className="pointer-events-none absolute -top-10 -left-12 h-44 w-44 rounded-full border border-[#e5ddc8]" />
+              <div className="pointer-events-none absolute top-8 right-12 h-52 w-52 rounded-full border border-[#e2dac6]" />
+              <div className="pointer-events-none absolute -bottom-16 right-28 h-64 w-64 rounded-full border border-[#e7dfcb]" />
+              <div className="pointer-events-none absolute bottom-8 -left-8 h-40 w-40 rounded-full border border-[#e5dcc7]" />
+
+              <div className="relative z-10 max-w-155">
+                <h2 className="text-[34px] leading-[1.08] tracking-[-0.02em] font-bold text-[#253d4e] sm:text-[48px]">
+                  {banner.title}
+                </h2>
+
+                <p className="mt-4 text-lg sm:text-[21px] text-[#6d6d6d]">{banner.subtitle}</p>
+
+                <form className="mt-8 flex max-w-130 rounded-full bg-white p-1 shadow-[0_14px_26px_-20px_rgba(37,61,78,0.35)]">
+                  <label className="flex flex-1 items-center gap-2 px-4 text-[#a3a3a3]">
+                    <SendHorizontal className="h-4 w-4" />
+                    <input
+                      type="email"
+                      placeholder="Your email address"
+                      className="h-11 w-full border-none bg-transparent text-sm text-[#4b5563] outline-none"
+                    />
+                  </label>
+
+                  <button
+                    type="submit"
+                    className="h-11 rounded-full bg-primary px-7 text-sm font-semibold text-white transition-colors hover:bg-[#2ca36b]"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
 
-      {/* Banner 2 - Medium */}
-      <div className="col-span-1 relative h-64 rounded overflow-hidden group cursor-pointer bg-orange-50 shadow-card">
-        <div className="absolute right-0 bottom-0 w-32 h-32 opacity-80"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuGnzSC30NmPAPF5FrrMQJmE-s2-Jo2OUQrelSee3hGtpzDjKziWA9U_kckTqXu9LRgDpVbD_OOxnkngOyBOR9rtJdAhxETPh76rckzRHsrusEJIahuwJlL1GGAYS-8EGHOkEZ-pN6gh8joYMe-HaJ8YrZxgN9a_ucld8KIRyjFuQitNRUkAxckopbdENB9khJ3E7KT3D1wmI1GG1affLO-dxyb48VdGbwGpYQD1Inm8dvudBbgzqljly85PfyoSNoegdlPRd7WyYv')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 p-6 flex flex-col justify-between">
-          <div>
-            <h3 className="text-white text-xl font-bold mb-1">
-              Daily Kitchen Essentials
-            </h3>
-            <p className="text-white/80 text-sm">Starting at $5</p>
-          </div>
-          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded font-bold text-xs self-start transition-colors">
-            View All
-          </button>
-        </div>
-      </div>
+      <button
+        type="button"
+        onClick={goToPrevious}
+        aria-label="Previous banner"
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 rounded-full bg-white/90 text-[#253d4e] shadow-sm hover:bg-white transition-colors"
+      >
+        <ChevronLeft className="h-5 w-5 mx-auto" />
+      </button>
 
-      {/* Banner 3 - Medium */}
-      <div className="col-span-1 relative h-64 rounded overflow-hidden group cursor-pointer shadow-card">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwKmXIq6o8lu7Od16PDyD7wyqzMaRVn3WBJlOhKEdFi0zfZZAgaGsehArQESfEh--UOs0o5AZzPGgE_I2SazAv7GDVllwyftYfZN-Pck9yKMNPiag7ZmpSlsyDz5GEc28-4LzSkfzhKNN370phNYJg1OjZn3bKekdaHhclI40cWiAuwN1MkejYdP69yzITgwRhBYONQOsZovaiSBd2tXfqX23v2iDTQopYqDI5ttM3GACPDo5DVY2uM5jcnhC65Z4HgoT3npSVu3pD')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 p-6 flex flex-col justify-between">
-          <div>
-            <span className="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded mb-2 inline-block">
-              HOT
-            </span>
-            <h3 className="text-white text-xl font-bold mb-1">
-              Healthy Snacks
-            </h3>
-            <p className="text-white/80 text-sm">Get 20% Cashback</p>
-          </div>
-          <button className="bg-white text-text-main hover:bg-gray-100 px-4 py-2 rounded font-bold text-xs self-start transition-colors">
-            Shop Now
-          </button>
-        </div>
+      <button
+        type="button"
+        onClick={goToNext}
+        aria-label="Next banner"
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 rounded-full bg-white/90 text-[#253d4e] shadow-sm hover:bg-white transition-colors"
+      >
+        <ChevronRight className="h-5 w-5 mx-auto" />
+      </button>
+
+      <div className="absolute z-20 left-1/2 -translate-x-1/2 bottom-4 flex items-center justify-center gap-1.5">
+        {banners.map((banner, index) => (
+          <button
+            key={banner.id}
+            type="button"
+            aria-label={`Go to banner ${index + 1}`}
+            onClick={() => goToSlide(index)}
+            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              index === activeIndex
+                ? "bg-primary"
+                : "border border-primary/70 bg-[#f8f1dd]"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

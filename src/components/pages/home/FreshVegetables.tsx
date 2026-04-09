@@ -1,7 +1,10 @@
-import ProductCard from '@/components/common/ProductCard';
+"use client";
+
+import DealCountdownCard from '@/components/common/DealCountdownCard';
+import HomePromoTiles from '@/components/pages/home/HomePromoTiles';
 import { Product } from '@/types/product';
-import { ArrowRight } from 'lucide-react';
-import React from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useRef } from 'react';
 const products: Product[] = [
     {
         id: '5',
@@ -38,23 +41,83 @@ const products: Product[] = [
     }
 ];
 
+const dealItems = products.map((item, index) => ({
+    ...item,
+    brand: ["NestFood", "Old El Paso", "Progressio", "Yoplait"][index] ?? "NestFood",
+    countdown: [
+        { days: 426, hours: 8, mins: 17, sec: 59 },
+        { days: 822, hours: 0, mins: 17, sec: 59 },
+        { days: 1156, hours: 0, mins: 17, sec: 59 },
+        { days: 398, hours: 8, mins: 17, sec: 59 },
+    ][index],
+}));
+
 const FreshVegetables: React.FC = () => {
+    const sliderRef = useRef<HTMLDivElement>(null);
+
+    const slidePrevious = () => {
+        if (!sliderRef.current) return;
+        sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth * 0.85, behavior: 'smooth' });
+    };
+
+    const slideNext = () => {
+        if (!sliderRef.current) return;
+        sliderRef.current.scrollBy({ left: sliderRef.current.clientWidth * 0.85, behavior: 'smooth' });
+    };
+
     return (
         <section>
             <div className="flex items-center justify-between mb-6">
                 <div className="relative">
-                    <h2 className="text-xl md:text-2xl font-bold text-text-main dark:text-white">Fresh Vegetables</h2>
+                    <h2 className="text-xl md:text-[34px] font-bold tracking-tight text-[#253d4e]">Deals Of The Day</h2>
                     <div className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary rounded-full"></div>
                 </div>
-                <a className="text-sm font-medium text-primary hover:underline flex items-center gap-1" href="#">
-                    View All <ArrowRight className="w-4 h-4" />
+                <a className="text-sm font-medium text-[#8b96a5] hover:text-primary transition-colors flex items-center gap-1" href="#">
+                    All Deals <ArrowRight className="w-4 h-4" />
                 </a>
+
+                <div className="ml-4 flex items-center gap-2">
+                    <button
+                        type="button"
+                        onClick={slidePrevious}
+                        aria-label="Previous deals"
+                        className="h-9 w-9 rounded-full border border-[#dce3ea] bg-white text-[#5d6d7a] hover:bg-primary hover:border-primary hover:text-white transition-colors"
+                    >
+                        <ChevronLeft className="h-4 w-4 mx-auto" />
+                    </button>
+                    <button
+                        type="button"
+                        onClick={slideNext}
+                        aria-label="Next deals"
+                        className="h-9 w-9 rounded-full border border-[#dce3ea] bg-white text-[#5d6d7a] hover:bg-primary hover:border-primary hover:text-white transition-colors"
+                    >
+                        <ChevronRight className="h-4 w-4 mx-auto" />
+                    </button>
+                </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {products.map(product => (
-                    <ProductCard key={product.id} product={product} />
+
+            <div
+                ref={sliderRef}
+                className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
+            >
+                {dealItems.map(product => (
+                    <div key={product.id} className="shrink-0 basis-5/6 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 snap-start">
+                        <DealCountdownCard
+                            id={product.id}
+                            name={product.name}
+                            category={product.category}
+                            brand={product.brand}
+                            image={product.image}
+                            price={product.price}
+                            originalPrice={product.originalPrice}
+                            rating={product.rating}
+                            countdown={product.countdown}
+                        />
+                    </div>
                 ))}
             </div>
+
+            <HomePromoTiles />
         </section>
     );
 };
