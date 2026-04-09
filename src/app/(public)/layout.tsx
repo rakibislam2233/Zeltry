@@ -14,13 +14,11 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen flex-col bg-background font-sans antialiased">
       <Navbar />
-
       {/* Main Content Area with Fixed Sidebar */}
-      <div className="container mx-auto px-4 py-6 mt-16">
+      <div className="container mx-auto px-4 py-6 mt-20 lg:mt-41">
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           {/* Sidebar - Dynamic based on route */}
           {isShopPage ? <ShopSidebar /> : <BrowseCategories />}
-
           {/* Page Content */}
           <main className="flex-1 w-full min-w-0">{children}</main>
         </div>

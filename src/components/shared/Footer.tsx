@@ -1,7 +1,8 @@
-'use client';
+"use client";
 import { Facebook, Twitter, Instagram, Youtube, Mail } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import Logo from "./Logo";
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -20,7 +21,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">ShopHub</h3>
+            <Logo />
             <p className="text-sm leading-relaxed mb-4">
               Your trusted marketplace for quality products across multiple
               categories. Shop with confidence.

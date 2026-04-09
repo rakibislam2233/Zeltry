@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen flex-col bg-background font-sans antialiased">
       <Navbar />
-      <div className="container mx-auto px-4 py-8 mt-16">
+      <div className="container mx-auto px-4 py-8 mt-20 lg:mt-41">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Dashboard Sidebar */}
           <DashboardSidebar />
