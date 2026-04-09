@@ -38,7 +38,7 @@ const WishlistPage = () => {
         <div className="space-y-6">
             <div className="flex items-center justify-between">
                 <div>
-                    <h2 className="text-2xl font-bold text-text-main dark:text-white">My Wishlist</h2>
+                    <h2 className="text-2xl font-bold text-text-main">My Wishlist</h2>
                     <p className="text-text-muted text-sm">You have {wishlistProducts.length} items in your wishlist</p>
                 </div>
             </div>
@@ -50,11 +50,11 @@ const WishlistPage = () => {
                     ))}
                 </div>
             ) : (
-                <div className="text-center py-20 bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800">
-                    <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-center py-20 bg-white rounded border border-gray-200">
+                    <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <ShoppingBag className="w-8 h-8 text-text-muted" />
                     </div>
-                    <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">Your wishlist is empty</h3>
+                    <h3 className="text-lg font-bold text-text-main mb-2">Your wishlist is empty</h3>
                     <p className="text-text-muted max-w-sm mx-auto">Browse our wide selection of products and add your specific items to the wishlist!</p>
                 </div>
             )}

@@ -9,10 +9,10 @@ const ShopSidebar = () => {
       className={`w-[280px] shrink-0 hidden lg:flex flex-col gap-8 overflow-x-hidden overflow-y-auto scrollbar-hide pr-2`}
     >
       {/* Filter Button (Mobile mainly, but here for header) */}
-      <div className="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-800">
+      <div className="flex items-center justify-between pb-4 border-b border-gray-200">
         <h2 className="text-xl font-bold flex items-center gap-2">
           Filters
-          <span className="text-xs font-normal text-text-muted bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded-full">
+          <span className="text-xs font-normal text-text-muted bg-gray-100 px-2 py-0.5 rounded-full">
             3 Active
           </span>
         </h2>
@@ -59,11 +59,11 @@ const ShopSidebar = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <span className="text-sm text-text-main dark:text-gray-300 group-hover:text-primary transition-colors">
+                <span className="text-sm text-text-main group-hover:text-primary transition-colors">
                   {cat.name}
                 </span>
               </div>
-              <span className="text-xs text-text-muted bg-gray-50 dark:bg-gray-800 px-2 py-0.5 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+              <span className="text-xs text-text-muted bg-gray-50 px-2 py-0.5 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                 {cat.count}
               </span>
             </label>
@@ -71,7 +71,7 @@ const ShopSidebar = () => {
         </div>
       </div>
 
-      <div className="w-full h-px bg-gray-100 dark:bg-gray-800"></div>
+      <div className="w-full h-px bg-gray-100"></div>
 
       {/* Price Range */}
       <div>
@@ -91,7 +91,7 @@ const ShopSidebar = () => {
             className="w-full h-2 bg-gray-200 rounded appearance-none cursor-pointer accent-primary"
           />
           <div className="flex items-center justify-between mt-4">
-            <span className="text-sm font-medium text-text-main dark:text-white">
+            <span className="text-sm font-medium text-text-main">
               Range:
             </span>
             <span className="text-sm font-bold text-primary">
@@ -101,7 +101,7 @@ const ShopSidebar = () => {
         </div>
       </div>
 
-      <div className="w-full h-px bg-gray-100 dark:bg-gray-800"></div>
+      <div className="w-full h-px bg-gray-100"></div>
 
       {/* Popular Brands */}
       <div>
@@ -138,7 +138,7 @@ const ShopSidebar = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </div>
-              <span className="text-sm text-text-main dark:text-gray-300 group-hover:text-primary transition-colors">
+              <span className="text-sm text-text-main group-hover:text-primary transition-colors">
                 {brand}
               </span>
             </label>

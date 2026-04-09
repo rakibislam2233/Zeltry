@@ -1,13 +1,10 @@
-import { ChevronDown, Headset, LayoutGrid } from "lucide-react";
+import { Headset } from "lucide-react";
 import Link from "next/link";
 
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Shop", href: "/shop" },
-  { name: "Mega Menu", href: "/mega-menu" },
-  { name: "Blog", href: "/blog" },
-  { name: "Pages", href: "/pages" },
   { name: "Contact", href: "/contact" },
 ];
 

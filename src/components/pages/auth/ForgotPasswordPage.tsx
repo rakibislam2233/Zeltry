@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ForgotPasswordPage = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white dark:bg-gray-950">
+    <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white">
       <div className="w-full max-w-md space-y-8">
         {/* Logo */}
         <div className="flex justify-center mb-8">
@@ -15,14 +15,14 @@ const ForgotPasswordPage = () => {
             <div className="w-6 h-6 bg-primary rounded flex items-center justify-center text-white font-bold text-xs">
               O
             </div>
-            <span className="font-bold text-lg text-text-main dark:text-white">
+            <span className="font-bold text-lg text-text-main">
               Zeltry
             </span>
           </Link>
         </div>
 
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-text-main dark:text-white mb-2">
+          <h1 className="text-3xl font-bold text-text-main mb-2">
             Forgot Password?
           </h1>
           <p className="text-text-muted">
@@ -33,7 +33,7 @@ const ForgotPasswordPage = () => {
 
         <form className="space-y-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-text-main dark:text-white">
+            <label className="text-sm font-medium text-text-main">
               Email Address
             </label>
             <div className="relative">
@@ -41,7 +41,7 @@ const ForgotPasswordPage = () => {
               <input
                 type="email"
                 placeholder="user@example.com"
-                className="w-full pl-12 pr-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                className="w-full pl-12 pr-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ const ForgotPasswordPage = () => {
           <div className="flex justify-center">
             <Link
               href="/login"
-              className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main dark:hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Login

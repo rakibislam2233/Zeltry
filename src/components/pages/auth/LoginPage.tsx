@@ -9,7 +9,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen w-full flex">
       {/* Left Side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-12 xl:p-16 bg-white dark:bg-gray-950">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-12 xl:p-16 bg-white">
         <div className="w-full max-w-112.5 space-y-8">
           {/* Logo */}
           <Link
@@ -19,13 +19,13 @@ const LoginPage = () => {
             <div className="w-6 h-6 bg-primary rounded flex items-center justify-center text-white font-bold text-xs">
               O
             </div>
-            <span className="font-bold text-lg text-text-main dark:text-white">
+            <span className="font-bold text-lg text-text-main">
               Zeltry
             </span>
           </Link>
 
           <div>
-            <h1 className="text-4xl font-bold text-text-main dark:text-white mb-2">
+            <h1 className="text-4xl font-bold text-text-main mb-2">
               Welcome Back
             </h1>
             <p className="text-text-muted">
@@ -36,7 +36,7 @@ const LoginPage = () => {
           <form className="space-y-6">
             <div className="space-y-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-text-main dark:text-white">
+                <label className="text-sm font-medium text-text-main">
                   Email or Username
                 </label>
                 <div className="relative">
@@ -44,13 +44,13 @@ const LoginPage = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full pl-12 pr-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                    className="w-full pl-12 pr-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-text-main dark:text-white">
+                <label className="text-sm font-medium text-text-main">
                   Password
                 </label>
                 <div className="relative">
@@ -78,12 +78,12 @@ const LoginPage = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
-                    className="w-full pl-12 pr-12 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                    className="w-full pl-12 pr-12 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-text-main dark:hover:text-white transition-colors"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-text-main transition-colors"
                   >
                     {showPassword ? (
                       <EyeOff className="w-5 h-5" />
@@ -99,7 +99,7 @@ const LoginPage = () => {
               <label className="flex items-center gap-2 cursor-pointer group">
                 <div className="relative">
                   <input type="checkbox" className="peer sr-only" />
-                  <div className="w-5 h-5 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 peer-checked:bg-primary peer-checked:border-primary transition-all"></div>
+                  <div className="w-5 h-5 rounded border border-gray-300 bg-white peer-checked:bg-primary peer-checked:border-primary transition-all"></div>
                   <svg
                     className="absolute top-1 left-0.5 w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"
                     fill="none"
@@ -114,7 +114,7 @@ const LoginPage = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-sm text-text-muted group-hover:text-text-main dark:group-hover:text-white transition-colors">
+                <span className="text-sm text-text-muted group-hover:text-text-main transition-colors">
                   Remember me
                 </span>
               </label>
@@ -134,32 +134,32 @@ const LoginPage = () => {
 
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-200 dark:border-gray-800"></div>
+              <div className="w-full border-t border-gray-200"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white dark:bg-gray-950 text-text-muted">
+              <span className="px-4 bg-white text-text-muted">
                 Or login with
               </span>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 hover:bg-gray-50 transition-colors">
               <img
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 alt="Google"
                 className="w-5 h-5"
               />
-              <span className="font-medium text-text-main dark:text-white">
+              <span className="font-medium text-text-main">
                 Google
               </span>
             </button>
-            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <button className="flex items-center justify-center gap-3 px-4 py-3 rounded border border-gray-200 hover:bg-gray-50 transition-colors">
               <Facebook
                 className="w-5 h-5 text-[#1877F2]"
                 fill="currentColor"
               />
-              <span className="font-medium text-text-main dark:text-white">
+              <span className="font-medium text-text-main">
                 Facebook
               </span>
             </button>
@@ -178,7 +178,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Image */}
-      <div className="hidden lg:block w-1/2 relative bg-gray-100 dark:bg-gray-900 overflow-hidden">
+      <div className="hidden lg:block w-1/2 relative bg-gray-100 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2000&auto=format&fit=crop"

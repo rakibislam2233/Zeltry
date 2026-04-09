@@ -42,11 +42,11 @@ const CartTable = () => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
+        <div className="bg-white rounded border border-gray-200 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
                 <table className="w-full text-left">
                     <thead>
-                        <tr className="bg-gray-50 dark:bg-gray-800 text-text-muted text-xs uppercase font-bold border-b border-gray-200 dark:border-gray-700">
+                        <tr className="bg-gray-50 text-text-muted text-xs uppercase font-bold border-b border-gray-200">
                             <th className="px-6 py-4">Product</th>
                             <th className="px-6 py-4">Price</th>
                             <th className="px-6 py-4">Quantity</th>
@@ -54,29 +54,29 @@ const CartTable = () => {
                             <th className="px-6 py-4 w-10"></th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                    <tbody className="divide-y divide-gray-100">
                         {cartItems.map(item => (
-                            <tr key={item.id} className="group hover:bg-gray-50/50 dark:hover:bg-gray-800/50 transition-colors">
+                            <tr key={item.id} className="group hover:bg-gray-50/50 transition-colors">
                                 <td className="px-6 py-4">
                                     <div className="flex items-center gap-4">
                                         <div className="w-16 h-16 rounded border bg-white p-1 shrink-0">
                                             <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
                                         </div>
-                                        <span className="font-medium text-text-main dark:text-white group-hover:text-primary transition-colors">{item.name}</span>
+                                        <span className="font-medium text-text-main group-hover:text-primary transition-colors">{item.name}</span>
                                     </div>
                                 </td>
-                                <td className="px-6 py-4 text-text-main dark:text-gray-300 font-medium">
+                                <td className="px-6 py-4 text-text-main font-medium">
                                     ${item.price.toFixed(2)}
                                 </td>
                                 <td className="px-6 py-4">
-                                    <div className="flex items-center border border-gray-200 dark:border-gray-700 rounded-full h-9 w-fit bg-white dark:bg-gray-900">
+                                    <div className="flex items-center border border-gray-200 rounded-full h-9 w-fit bg-white">
                                         <button
                                             onClick={() => updateQuantity(item.id, -1)}
                                             className="w-8 h-full flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
                                         >
                                             <Minus className="w-3 h-3" />
                                         </button>
-                                        <span className="w-8 text-center text-sm font-bold text-text-main dark:text-white">{item.quantity}</span>
+                                        <span className="w-8 text-center text-sm font-bold text-text-main">{item.quantity}</span>
                                         <button
                                             onClick={() => updateQuantity(item.id, 1)}
                                             className="w-8 h-full flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
@@ -85,13 +85,13 @@ const CartTable = () => {
                                         </button>
                                     </div>
                                 </td>
-                                <td className="px-6 py-4 font-bold text-text-main dark:text-white">
+                                <td className="px-6 py-4 font-bold text-text-main">
                                     ${(item.price * item.quantity).toFixed(2)}
                                 </td>
                                 <td className="px-6 py-4 text-right">
                                     <button
                                         onClick={() => removeItem(item.id)}
-                                        className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 transition-colors"
+                                        className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-400 hover:bg-red-50 hover:text-red-500 transition-colors"
                                     >
                                         <X className="w-4 h-4" />
                                     </button>
@@ -102,11 +102,11 @@ const CartTable = () => {
                 </table>
             </div>
 
-            <div className="p-6 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <button className="text-sm font-bold bg-gray-100 dark:bg-gray-800 text-text-main dark:text-white px-6 py-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto">
+            <div className="p-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <button className="text-sm font-bold bg-gray-100 text-text-main px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-full sm:w-auto">
                     Return to Shop
                 </button>
-                <button className="text-sm font-bold border border-gray-200 dark:border-gray-700 text-text-main dark:text-white px-6 py-3 rounded-full hover:bg-primary hover:text-white hover:border-primary transition-all w-full sm:w-auto">
+                <button className="text-sm font-bold border border-gray-200 text-text-main px-6 py-3 rounded-full hover:bg-primary hover:text-white hover:border-primary transition-all w-full sm:w-auto">
                     Update Cart
                 </button>
             </div>

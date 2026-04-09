@@ -7,8 +7,8 @@ const ResetPasswordPage = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white dark:bg-gray-950">
-            <div className="w-full max-w-md space-y-8 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl dark:shadow-none border border-gray-200 dark:border-gray-800">
+        <div className="min-h-screen w-full flex items-center justify-center p-4 bg-white">
+            <div className="w-full max-w-md space-y-8 bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
                 <div className="flex justify-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                         <RefreshCw className="w-8 h-8" />
@@ -16,24 +16,24 @@ const ResetPasswordPage = () => {
                 </div>
 
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-text-main dark:text-white mb-2">Reset Password</h1>
+                    <h1 className="text-2xl font-bold text-text-main mb-2">Reset Password</h1>
                     <p className="text-text-muted text-sm">Secure your account. Your new password must be different from previously used passwords.</p>
                 </div>
 
                 <form className="space-y-6">
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-text-main dark:text-white">New Password</label>
+                            <label className="text-sm font-medium text-text-main">New Password</label>
                             <div className="relative">
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Enter new password"
-                                    className="w-full px-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                                    className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                                 />
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-text-main dark:hover:text-white transition-colors"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-text-main transition-colors"
                                 >
                                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                                 </button>
@@ -41,12 +41,12 @@ const ResetPasswordPage = () => {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-text-main dark:text-white">Confirm New Password</label>
+                            <label className="text-sm font-medium text-text-main">Confirm New Password</label>
                             <div className="relative">
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Re-enter new password"
-                                    className="w-full px-4 py-3 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-950 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white"
+                                    className="w-full px-4 py-3 rounded border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
                                 />
                             </div>
                         </div>
@@ -57,7 +57,7 @@ const ResetPasswordPage = () => {
                                 <span className="text-text-muted">Password Strength</span>
                                 <span className="text-yellow-500">Medium</span>
                             </div>
-                            <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden flex">
+                            <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden flex">
                                 <div className="h-full w-1/4 bg-green-500"></div>
                                 <div className="h-full w-1/4 bg-green-500"></div>
                                 <div className="h-full w-1/4 bg-yellow-400"></div>
@@ -85,7 +85,7 @@ const ResetPasswordPage = () => {
                     </button>
 
                     <div className="flex justify-center pt-2">
-                        <Link href="/login" className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main dark:hover:text-white transition-colors">
+                        <Link href="/login" className="flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main transition-colors">
                             <ArrowLeft className="w-4 h-4" />
                             Back to Login
                         </Link>
