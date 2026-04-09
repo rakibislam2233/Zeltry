@@ -119,47 +119,28 @@ const TodayHotSale: React.FC = () => {
 
   const slidePrevious = () => {
     if (!sliderRef.current) return;
-    sliderRef.current.scrollBy({ left: -sliderRef.current.clientWidth * 0.85, behavior: "smooth" });
+    sliderRef.current.scrollBy({
+      left: -sliderRef.current.clientWidth * 0.85,
+      behavior: "smooth",
+    });
   };
 
   const slideNext = () => {
     if (!sliderRef.current) return;
-    sliderRef.current.scrollBy({ left: sliderRef.current.clientWidth * 0.85, behavior: "smooth" });
+    sliderRef.current.scrollBy({
+      left: sliderRef.current.clientWidth * 0.85,
+      behavior: "smooth",
+    });
   };
-
-  const tabs = [
-    "All",
-    "Milks & Dairies",
-    "Coffes & Teas",
-    "Pet Foods",
-    "Meats",
-    "Vegetables",
-    "Fruits",
-  ];
 
   return (
     <section>
       <div className="flex items-center justify-between mb-6">
         <div className="relative">
-          <h2 className="text-xl md:text-[34px] font-bold tracking-tight text-[#253d4e]">
+          <h2 className="text-xl md:text-2xl font-bold tracking-tight text-[#253d4e]">
             Popular Products
           </h2>
           <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full" />
-
-        </div>
-
-        <div className="hidden xl:flex items-center gap-4 text-[13px] text-[#5d6d7a]">
-          {tabs.map((tab, index) => (
-            <button
-              type="button"
-              key={tab}
-              className={`transition-colors hover:text-primary ${
-                index === 0 ? "text-primary font-semibold" : ""
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
         </div>
 
         <div className="ml-4 flex items-center gap-2">
