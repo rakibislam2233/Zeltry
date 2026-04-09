@@ -35,7 +35,7 @@ const DailyBestSellCard = ({
     <article className="relative rounded-md border border-[#e6e8ec] bg-white transition-all duration-300 ">
       {badge && (
         <span
-          className={`absolute left-0 top-0 rounded-br-lg rounded-tl-xl px-3 py-0.5 text-[10px] z-10 font-semibold text-white ${badge.colorClass}`}
+          className={`absolute left-0 top-0 rounded-br-lg rounded-tl-md px-3 py-0.5 text-[10px] z-10 font-semibold text-white ${badge.colorClass}`}
         >
           {badge.text}
         </span>
@@ -45,7 +45,7 @@ const DailyBestSellCard = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-40 object-cover rounded-t-xl mix-blend-multiply transform"
+          className="w-full h-40 object-cover rounded-t-md mix-blend-multiply transform"
         />
       </Link>
 
@@ -83,18 +83,6 @@ const DailyBestSellCard = ({
           <span className="rounded-full bg-[#fff4e8] px-2 py-0.5 font-medium text-[#f59e0b]">
             In Stock
           </span>
-        </div>
-
-        <div className="mt-3">
-          <div className="flex items-center justify-between text-[11px] text-[#6b7280]">
-            <span>
-              Sold: <span className="font-semibold text-[#253d4e]">{sold}</span>/{total}
-            </span>
-            <span className="font-semibold text-primary">{soldPercent}%</span>
-          </div>
-          <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[#eef2f6]">
-            <div className="h-full rounded-full bg-primary" style={{ width: `${soldPercent}%` }} />
-          </div>
         </div>
       </div>
     </article>
