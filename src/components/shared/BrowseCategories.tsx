@@ -1,25 +1,9 @@
-import {
-  Grape,
-  Milk,
-  Package,
-  Shirt,
-  SlidersHorizontal,
-  Wheat
-} from "lucide-react";
-
-type Category = {
-  name: string;
-  icon: React.ReactNode;
-  count: number;
-};
-
-const categories: Category[] = [
-  { name: "Milks & Dairies", icon: <Milk className="h-4 w-4" />, count: 3 },
-  { name: "Clothing", icon: <Shirt className="h-4 w-4" />, count: 6 },
-  { name: "Pet Foods", icon: <Package className="h-4 w-4" />, count: 4 },
-  { name: "Baking material", icon: <Wheat className="h-4 w-4" />, count: 8 },
-  { name: "Fresh Fruit", icon: <Grape className="h-4 w-4" />, count: 10 },
-];
+'use client'
+import { Slider } from "@/components/ui/slider";
+import { categories } from "@/data/home/categories";
+import { SlidersHorizontal } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const newProducts = [
   { emoji: "🥬", name: "Chen Cardigan", price: "$99.50" },
@@ -28,10 +12,14 @@ const newProducts = [
 ];
 
 const BrowseCategories = () => {
+  const [priceRange, setPriceRange] = useState([750]);
+
   return (
     <aside className="w-70 shrink-0 hidden lg:flex flex-col gap-4">
       <div className="rounded-md border border-[#e6ecf2] bg-white p-4 shadow-sm">
-        <h3 className="text-[22px] font-bold text-[#253d4e]">Category</h3>
+        <h3 className="text-[22px] font-bold text-[#253d4e]">
+          Browse Categories
+        </h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
         <div className="mt-4 space-y-2">
@@ -39,14 +27,24 @@ const BrowseCategories = () => {
             <button
               type="button"
               key={category.name}
-              className="w-full rounded-md border border-[#e4e9ef] px-3 py-2.5 flex items-center justify-between hover:border-primary/40 hover:bg-[#f7fff9] transition-colors"
+              className="w-full rounded-md border border-[#e4e9ef] px-3 py-2.5 flex items-center gap-3 text-left transition-colors hover:border-primary/40 hover:bg-[#f7fff9]"
             >
-              <span className="inline-flex items-center gap-2 text-sm text-[#4f5d77]">
-                <span className="text-primary">{category.icon}</span>
+              <div className="h-11 w-11 shrink-0 rounded-md border border-[#edf1f5] bg-white p-1.5 flex items-center justify-center">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <span className="min-w-0 flex-1 text-sm font-medium text-[#4f5d77] leading-tight">
                 {category.name}
               </span>
-              <span className="h-5 min-w-5 px-1.5 rounded-full bg-[#ecf7f1] text-[11px] font-semibold text-primary inline-flex items-center justify-center">
-                {category.count}
+
+              <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-[#ecf7f1] px-2 text-[11px] font-semibold text-primary">
+                {String(category.id).padStart(2, "0")}
               </span>
             </button>
           ))}
@@ -57,17 +55,17 @@ const BrowseCategories = () => {
         <h3 className="text-[22px] font-bold text-[#253d4e]">Fill by price</h3>
         <div className="mt-3 h-0.5 w-12 bg-primary rounded-full" />
 
-        <div className="mt-5">
-          <input
-            type="range"
-            min="0"
-            max="100"
-            defaultValue="56"
-            className="w-full accent-primary"
+        <div className="mt-5 space-y-3">
+          <Slider
+            value={priceRange}
+            min={500}
+            max={1000}
+            step={10}
+            onValueChange={setPriceRange}
           />
-          <div className="mt-2 flex items-center justify-between text-xs text-[#7e7e7e]">
+          <div className="flex items-center justify-between text-xs text-[#7e7e7e]">
             <span>From: $500</span>
-            <span>To: $1,000</span>
+            <span>To: ${priceRange[0].toLocaleString()}</span>
           </div>
         </div>
 
@@ -88,7 +86,8 @@ const BrowseCategories = () => {
             <input type="checkbox" className="accent-primary" /> New (1506)
           </label>
           <label className="flex items-center gap-2">
-            <input type="checkbox" className="accent-primary" /> Refurbished (27)
+            <input type="checkbox" className="accent-primary" /> Refurbished
+            (27)
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" className="accent-primary" /> Used (45)
@@ -110,13 +109,20 @@ const BrowseCategories = () => {
 
         <div className="mt-4 space-y-4">
           {newProducts.map((product) => (
-            <article key={product.name} className="flex items-center gap-3 rounded-md border border-[#eef2f6] p-2 hover:bg-[#fafcfe] transition-colors">
+            <article
+              key={product.name}
+              className="flex items-center gap-3 rounded-md border border-[#eef2f6] p-2 hover:bg-[#fafcfe] transition-colors"
+            >
               <div className="h-14 w-14 rounded-md bg-[#f6f6f6] border border-gray-200 flex items-center justify-center text-2xl">
                 {product.emoji}
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-[#253d4e]">{product.name}</h4>
-                <p className="text-[13px] text-primary font-semibold">{product.price}</p>
+                <h4 className="text-sm font-semibold text-[#253d4e]">
+                  {product.name}
+                </h4>
+                <p className="text-[13px] text-primary font-semibold">
+                  {product.price}
+                </p>
               </div>
             </article>
           ))}

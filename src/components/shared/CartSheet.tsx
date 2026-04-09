@@ -43,11 +43,9 @@ const CartSheet = ({ open, onOpenChange }: CartSheetProps) => {
       }
     };
 
-    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isRendered, onOpenChange]);
@@ -86,14 +84,14 @@ const CartSheet = ({ open, onOpenChange }: CartSheetProps) => {
       <button
         type="button"
         aria-label="Close cart"
-        className={`absolute inset-0 bg-black/40 backdrop-blur-[1px] transition-opacity duration-200 ease-out ${
+        className={`absolute inset-0 bg-black/40 backdrop-blur-[1px] transition-opacity duration-300 ease-out ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         onClick={() => onOpenChange(false)}
       />
 
       <aside
-        className={`absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl transform transition-all duration-300 ease-out ${
+        className={`absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl transform-gpu transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform ${
           isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
