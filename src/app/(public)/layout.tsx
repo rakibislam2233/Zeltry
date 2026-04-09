@@ -1,7 +1,7 @@
 "use client";
 
 import BrowseCategories from "@/components/shared/BrowseCategories";
-import { Footer } from "@/components/shared/Footer";
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import ShopSidebar from "@/components/shared/ShopSidebar";
 import { usePathname } from "next/navigation";
