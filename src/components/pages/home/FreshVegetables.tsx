@@ -110,7 +110,7 @@ const FreshVegetables: React.FC = () => {
         ref={sliderRef}
         className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
       >
-        {dealItems?.map((product) => (
+        {dealItems.map((product) => (
           <div
             key={product.id}
             className="shrink-0 basis-5/6 sm:basis-[calc((100%-1rem)/2)] lg:basis-[calc((100%-2rem)/3)] xl:basis-[calc((100%-3rem)/4)] snap-start"
@@ -129,8 +129,6 @@ const FreshVegetables: React.FC = () => {
           </div>
         ))}
       </div>
-
-      <HomePromoTiles />
     </section>
   );
 };

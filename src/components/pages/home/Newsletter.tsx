@@ -3,7 +3,7 @@ import React from "react";
 
 const Newsletter: React.FC = () => {
   return (
-    <section className="mt-10 bg-primary rounded p-8 relative overflow-hidden">
+    <section className="mt-10 bg-primary rounded-xl p-8 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">

@@ -11,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <article className="relative h-full rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
       {product.badge && (
         <span
-          className={`absolute top-2 left-2 text-white text-[10px] font-semibold px-4 py-0.5 rounded ${product.badge.colorClass} z-10`}
+          className={`absolute left-0 top-0 rounded-br-lg rounded-tl-xl px-3 py-0.5 text-[10px] z-10 font-semibold text-white ${product.badge.colorClass}`}
         >
           {product.badge.text}
         </span>
@@ -21,8 +21,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-36 object-cover mix-blend-multiply transform"
-        />
+          className="w-full h-40 object-cover rounded-t-xl mix-blend-multiply transform"
+        />  
       </Link>
 
       <div className="flex flex-col flex-1 gap-2 p-3">

@@ -1,5 +1,6 @@
 import DailyBestSells from "@/components/pages/home/DailyBestSells";
 import FreshVegetables from "@/components/pages/home/FreshVegetables";
+import HomePromoTiles from "@/components/pages/home/HomePromoTiles";
 import Newsletter from "@/components/pages/home/Newsletter";
 import PromotionBanner from "@/components/pages/home/PromotionBanner";
 import TodayHotSale from "@/components/pages/home/TodayHotSale";
@@ -11,6 +12,7 @@ const HomePage = () => {
       <TodayHotSale />
       <DailyBestSells />
       <FreshVegetables />
+      <HomePromoTiles />
       <Newsletter />
     </section>
   );
