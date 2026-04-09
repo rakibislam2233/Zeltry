@@ -1,10 +1,10 @@
 import DailyBestSells from "@/components/pages/home/DailyBestSells";
-import FreshVegetables from "@/components/pages/home/FreshVegetables";
+import DealsOfTheDay from "@/components/pages/home/DealsOfTheDay";
 import HomeProductColumns from "@/components/pages/home/HomeProductColumns";
+import PopularProduct from "@/components/pages/home/PopularProduct";
 import PromotionBanner from "@/components/pages/home/PromotionBanner";
 import ServiceHighlights from "@/components/pages/home/ServiceHighlights";
 import ShopByCategories from "@/components/pages/home/ShopByCategories";
-import TodayHotSale from "@/components/pages/home/TodayHotSale";
 
 const HomePage = () => {
   return (
@@ -12,9 +12,9 @@ const HomePage = () => {
       <PromotionBanner />
       <ServiceHighlights />
       <ShopByCategories />
-      <TodayHotSale />
+      <PopularProduct />
       <DailyBestSells />
-      <FreshVegetables />
+      <DealsOfTheDay />
       <HomeProductColumns />
     </section>
   );
