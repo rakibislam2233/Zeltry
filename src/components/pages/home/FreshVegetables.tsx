@@ -1,5 +1,5 @@
 import ProductCard from '@/components/common/ProductCard';
-import { Product } from '@/components/shared/BrowseCategories';
+import { Product } from '@/types/product';
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
 const products: Product[] = [

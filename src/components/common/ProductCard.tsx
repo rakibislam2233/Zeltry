@@ -1,6 +1,6 @@
-import { Heart, Plus, Star, StarHalf } from "lucide-react";
+import { Product } from "@/types/product";
+import { Heart, ShoppingCart, Star, StarHalf } from "lucide-react";
 import Link from "next/link";
-import { Product } from "../shared/BrowseCategories";
 
 interface ProductCardProps {
   product: Product;
@@ -8,42 +8,37 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="bg-surface-light dark:bg-surface-dark rounded border border-gray-200 dark:border-gray-800 p-4  transition-all duration-300 group relative flex flex-col h-full">
+    <article className="relative h-full rounded border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
       {product.badge && (
         <span
-          className={`absolute top-4 left-4 text-white text-[10px] font-bold px-2.5 py-1 rounded-full ${product.badge.colorClass} z-10 shadow-sm`}
+          className={`absolute top-2 left-2 text-white text-[11px] font-semibold px-6 py-1 rounded ${product.badge.colorClass} z-10`}
         >
           {product.badge.text}
         </span>
       )}
-      <button className="absolute top-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all z-10 shadow-sm opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0 duration-300">
-        <Heart className="w-4 h-4" />
-      </button>
 
       <Link
         href={`/product/${product.id}`}
-        className="block relative w-full aspect-square mb-4 rounded overflow-hidden bg-gray-50 dark:bg-gray-800/50 md:flex items-center justify-center p-6 cursor-pointer"
+        className="block relative w-full aspect-square mb-4 overflow-hidden "
       >
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-110 transition-transform duration-500 ease-out"
+          className="w-full  object-contain mix-blend-multiply transform"
         />
       </Link>
 
-      <div className="flex flex-col flex-1 gap-2">
-        <span className="text-xs font-medium text-text-muted uppercase tracking-wider">
-          {product.category}
-        </span>
+      <div className="flex flex-col flex-1 gap-2.5 px-4 pb-4">
+        <span className="text-sm text-[#8b96a5]">{product.category}</span>
         <Link
           href={`/product/${product.id}`}
-          className="font-bold text-base text-text-main dark:text-gray-100 hover:text-primary transition-colors line-clamp-2"
+          className="font-bold text-xl leading-tight text-[#253d4e] hover:text-primary transition-colors line-clamp-2"
           title={product.name}
         >
           {product.name}
         </Link>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1.5">
           {[1, 2, 3, 4, 5].map((star) => {
             const isFilled = star <= Math.floor(product.rating);
             const isHalf =
@@ -60,24 +55,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 }`}
               >
                 {isHalf ? (
-                  <StarHalf className="w-3.5 h-3.5 fill-current" />
+                  <StarHalf className="w-3 h-3 fill-current" />
                 ) : (
                   <Star
-                    className={`w-3.5 h-3.5 ${isFilled ? "fill-current" : ""}`}
+                    className={`w-3 h-3 ${isFilled ? "fill-current" : ""}`}
                   />
                 )}
               </span>
             );
           })}
-          <span className="text-xs text-text-muted ml-1 font-medium">
+          <span className="text-sm text-[#9ca3af] ml-1">
             ({product.rating.toFixed(1)})
           </span>
         </div>
-
-        <div className="mt-auto pt-4 flex items-end justify-between gap-2">
-          <div className="flex flex-col">
+        <div className="mt-auto pt-3 flex items-end justify-between gap-3">
+          <div className="flex items-end gap-2">
+            <span className="text-2xl font-extrabold tracking-tight text-primary">
+              ${product.price.toFixed(2)}
+            </span>
             <span
-              className={`text-xs text-text-muted line-through font-medium ${
+              className={`text-sm text-[#9ca3af] line-through font-medium pb-1 ${
                 !product.originalPrice && "opacity-0"
               }`}
             >
@@ -85,18 +82,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 ? `$${product.originalPrice.toFixed(2)}`
                 : "$0.00"}
             </span>
-            <span className="text-lg font-bold text-primary">
-              ${product.price.toFixed(2)}
-            </span>
           </div>
 
-          <button className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white text-text-main dark:text-white px-4 py-2 rounded-full font-bold text-sm transition-all shadow-sm hover:shadow-primary/30">
-            <Plus className="w-4 h-4" />
+          <button className="h-10 px-4 rounded-md bg-[#def9ec] text-primary hover:bg-primary hover:text-white text-sm font-semibold inline-flex items-center gap-1.5 transition-colors">
+            <ShoppingCart className="w-4 h-4" />
             Add
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

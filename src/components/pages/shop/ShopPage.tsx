@@ -1,7 +1,7 @@
 import ProductCard from '@/components/common/ProductCard';
 import Breadcrumb from '@/components/shared/Breadcrumb';
-import { Product } from '@/components/shared/BrowseCategories';
 import Pagination from '@/components/shared/Pagination';
+import { Product } from '@/types/product';
 import { ChevronDown, LayoutGrid, List } from 'lucide-react';
 
 // Mock data

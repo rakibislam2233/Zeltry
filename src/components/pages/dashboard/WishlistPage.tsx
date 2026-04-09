@@ -1,6 +1,6 @@
 'use client';
 import ProductCard from '@/components/common/ProductCard';
-import { Product } from '@/components/shared/BrowseCategories';
+import { Product } from '@/types/product';
 import { ShoppingBag } from 'lucide-react';
 
 // Mock data for wishlist

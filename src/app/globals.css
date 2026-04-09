@@ -149,7 +149,7 @@
 /* Utility Classes */
 @layer utilities {
   .container {
-    @apply max-w-[1240px] mx-auto px-4 md:px-5;
+    @apply max-w-[1340px] mx-auto px-4 md:px-5;
   }
 }
 
