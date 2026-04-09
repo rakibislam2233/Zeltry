@@ -31,7 +31,7 @@ const VerifyEmailPage = () => {
                         ))}
                     </div>
 
-                    <button className="w-full bg-primary text-white font-bold py-3.5 rounded-xl transition-all">
+                    <button className="w-full bg-primary text-white font-bold py-3.5 rounded-md transition-all">
                         Verify Account
                     </button>
 

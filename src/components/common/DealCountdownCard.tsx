@@ -37,12 +37,12 @@ const DealCountdownCard = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-48 rounded-xl object-cover mix-blend-multiply transform"
+          className="w-full h-48 rounded-md object-cover mix-blend-multiply transform"
         />
       </Link>
 
       <div className="w-full p-3 -mt-24">
-        <div className="w-full relative z-10 rounded-xl border border-[#eceff3] bg-white p-3">
+        <div className="w-full relative z-10 rounded-md border border-[#eceff3] bg-white p-3">
           <div className="flex items-center justify-between gap-2">
             <p className="text-[11px] text-[#8b96a5]">{category}</p>
             <span className="rounded-full bg-[#fff3e8] px-2 py-0.5 text-[10px] font-semibold text-[#f59e0b]">

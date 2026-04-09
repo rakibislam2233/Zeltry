@@ -13,11 +13,11 @@ const ProductGallery = () => {
 
     return (
         <div className="flex flex-col gap-4">
-            <div className="relative rounded-xl border border-[#e5e9ef] bg-white p-4">
+            <div className="relative rounded-md border border-[#e5e9ef] bg-white p-4">
                 <img
                     src={images[selectedImage]}
                     alt="Product"
-                    className="h-[360px] w-full rounded-xl object-cover"
+                    className="h-[360px] w-full rounded-md object-cover"
                 />
 
                 <button
@@ -39,9 +39,9 @@ const ProductGallery = () => {
                     <div
                         key={idx}
                         onClick={() => setSelectedImage(idx)}
-                        className={`aspect-square bg-white rounded-xl border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary' : 'border-[#e5e9ef]'}`}
+                        className={`aspect-square bg-white rounded-md border p-2 cursor-pointer transition-all ${selectedImage === idx ? 'border-primary' : 'border-[#e5e9ef]'}`}
                     >
-                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-xl" />
+                        <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover rounded-md" />
                     </div>
                 ))}
             </div>

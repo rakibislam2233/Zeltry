@@ -103,7 +103,7 @@ const LoginPage = () => {
             </Link>
           </div>
 
-          <button className="w-full bg-primary text-white font-bold py-3.5 rounded-xl transition-all">
+          <button className="w-full bg-primary text-white font-bold py-3.5 rounded-md transition-all">
             Log In
           </button>
         </form>
@@ -120,7 +120,7 @@ const LoginPage = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-[#dce4ec] transition-colors">
+          <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-md border border-[#dce4ec] transition-colors">
             <img
               src="https://www.svgrepo.com/show/475656/google-color.svg"
               alt="Google"
@@ -128,7 +128,7 @@ const LoginPage = () => {
             />
             <span className="font-medium text-[#253d4e]">Google</span>
           </button>
-          <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-[#dce4ec] transition-colors">
+          <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-md border border-[#dce4ec] transition-colors">
             <Facebook className="w-5 h-5 text-[#1877F2]" fill="currentColor" />
             <span className="font-medium text-[#253d4e]">Facebook</span>
           </button>

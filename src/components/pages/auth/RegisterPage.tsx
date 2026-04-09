@@ -111,7 +111,7 @@ const RegisterPage = () => {
                         <span className="text-sm text-[#6b7280] transition-colors">I agree to the <a href="#" className="font-medium text-[#253d4e] underline decoration-gray-300">Terms & Conditions</a> and <a href="#" className="font-medium text-[#253d4e] underline decoration-gray-300">Privacy Policy</a>.</span>
                     </label>
 
-                    <button className="w-full bg-primary text-white font-bold py-3.5 rounded-xl transition-all">
+                    <button className="w-full bg-primary text-white font-bold py-3.5 rounded-md transition-all">
                         Create Account
                     </button>
                 </form>
@@ -126,11 +126,11 @@ const RegisterPage = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                    <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-[#dce4ec] transition-colors">
+                    <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-md border border-[#dce4ec] transition-colors">
                         <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
                         <span className="font-medium text-[#253d4e]">Google</span>
                     </button>
-                    <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-xl border border-[#dce4ec] transition-colors">
+                    <button className="flex items-center justify-center gap-3 px-4 py-3 rounded-md border border-[#dce4ec] transition-colors">
                         <Facebook className="w-5 h-5 text-[#1877F2]" fill="currentColor" />
                         <span className="font-medium text-[#253d4e]">Facebook</span>
                     </button>

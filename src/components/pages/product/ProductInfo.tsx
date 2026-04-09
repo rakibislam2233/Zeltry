@@ -53,7 +53,7 @@ const ProductInfo = () => {
                         <button
                             key={option}
                             type="button"
-                            className={`h-8 rounded-xl border px-3 text-xs font-semibold transition-colors ${idx === 1 ? 'border-primary bg-[#effcf5] text-primary' : 'border-[#e4e9ef] text-[#4f5d77]'}`}
+                            className={`h-8 rounded-md border px-3 text-xs font-semibold transition-colors ${idx === 1 ? 'border-primary bg-[#effcf5] text-primary' : 'border-[#e4e9ef] text-[#4f5d77]'}`}
                         >
                             {option}
                         </button>
@@ -62,7 +62,7 @@ const ProductInfo = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <div className="flex items-center border border-[#e1e7ee] rounded-xl h-12 w-fit bg-white">
+                <div className="flex items-center border border-[#e1e7ee] rounded-md h-12 w-fit bg-white">
                     <button
                         onClick={() => setQuantity(q => Math.max(1, q - 1))}
                         className="w-12 h-full flex items-center justify-center text-gray-500 transition-colors"
@@ -78,11 +78,11 @@ const ProductInfo = () => {
                     </button>
                 </div>
 
-                <button className="flex-1 bg-primary text-white font-bold rounded-xl h-12 px-8 transition-all flex items-center justify-center gap-2">
+                <button className="flex-1 bg-primary text-white font-bold rounded-md h-12 px-8 transition-all flex items-center justify-center gap-2">
                     Add to Cart <span className="hidden sm:inline">- ${(38 * quantity).toFixed(2)}</span>
                 </button>
 
-                <button className="h-12 w-12 rounded-xl border border-[#e1e7ee] bg-white flex items-center justify-center text-gray-500 transition-all">
+                <button className="h-12 w-12 rounded-md border border-[#e1e7ee] bg-white flex items-center justify-center text-gray-500 transition-all">
                     <Heart className="w-5 h-5" />
                 </button>
             </div>

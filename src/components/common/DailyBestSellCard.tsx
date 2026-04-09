@@ -32,7 +32,7 @@ const DailyBestSellCard = ({
   const soldPercent = Math.min(100, Math.round((sold / Math.max(total, 1)) * 100));
 
   return (
-    <article className="relative rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 ">
+    <article className="relative rounded-md border border-[#e6e8ec] bg-white transition-all duration-300 ">
       {badge && (
         <span
           className={`absolute left-0 top-0 rounded-br-lg rounded-tl-xl px-3 py-0.5 text-[10px] z-10 font-semibold text-white ${badge.colorClass}`}

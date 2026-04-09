@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <article className="relative h-full rounded-xl border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
+    <article className="relative h-full rounded-md border border-[#e6e8ec] bg-white transition-all duration-300 group overflow-hidden">
       {product.badge && (
         <span
           className={`absolute left-0 top-0 rounded-br-lg rounded-tl-xl px-3 py-0.5 text-[10px] z-10 font-semibold text-white ${product.badge.colorClass}`}

@@ -99,7 +99,7 @@ const ShopPage = () => {
   return (
     <div className="w-full">
       {/* Top Banner */}
-      <section className="relative mb-6 overflow-hidden rounded-xl border border-[#d9ebe2] bg-[#d7efe4] px-6 py-8 md:px-10">
+      <section className="relative mb-6 overflow-hidden rounded-md border border-[#d9ebe2] bg-[#d7efe4] px-6 py-8 md:px-10">
         <div className="pointer-events-none absolute -left-8 bottom-0 h-24 w-24 rounded-full border border-[#c6e0d5]" />
         <div className="pointer-events-none absolute right-8 top-4 h-20 w-20 rounded-full border border-[#c6e0d5]" />
 
@@ -133,7 +133,7 @@ const ShopPage = () => {
         </aside>
         <main className="min-w-0 flex-1">
           {/* Sort Bar */}
-          <div className="rounded-xl border border-gray-200 bg-white p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="rounded-md border border-gray-200 bg-white p-3 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-[#728294]">We found 29 items for you!</p>
             <div className="flex items-center gap-3 w-full sm:w-auto">
               <div className="flex items-center gap-2 text-sm font-medium mr-auto sm:mr-0">

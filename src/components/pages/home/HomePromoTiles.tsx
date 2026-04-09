@@ -8,7 +8,7 @@ const HomePromoTiles = () => {
       {promoTiles.map((tile) => (
         <article
           key={tile.title}
-          className={`relative overflow-hidden rounded-xl border border-[#e3e7ea] p-6 ${tile.bgClass}`}
+          className={`relative overflow-hidden rounded-md border border-[#e3e7ea] p-6 ${tile.bgClass}`}
         >
           <h3 className="max-w-55 whitespace-pre-line text-base md:text-xl leading-tight font-bold text-[#253d4e]">
             {tile.title}

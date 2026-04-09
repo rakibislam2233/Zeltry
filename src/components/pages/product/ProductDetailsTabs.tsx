@@ -8,7 +8,7 @@ const ProductDetailsTabs = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("description");
 
   return (
-    <section className="mt-10 rounded-xl border border-[#e6ebf1] bg-white p-6">
+    <section className="mt-10 rounded-md border border-[#e6ebf1] bg-white p-6">
       <div className="mb-6 flex flex-wrap items-center gap-6 border-b border-[#ebeff4]">
         <button
           type="button"
@@ -80,17 +80,17 @@ const ProductDetailsTabs = () => {
 
       {activeTab === "reviews" && (
         <div className="space-y-4">
-          <article className="rounded-xl border border-[#e8edf2] p-4">
+          <article className="rounded-md border border-[#e8edf2] p-4">
             <p className="text-sm font-semibold text-[#253d4e]">Sadia Rahman</p>
             <p className="mt-1 text-xs text-[#8a95a3]">Rated 5.0 • 2 days ago</p>
             <p className="mt-2 text-sm text-[#6b7280]">Very fresh product and great packaging. Delivery was quick and quality is excellent.</p>
           </article>
-          <article className="rounded-xl border border-[#e8edf2] p-4">
+          <article className="rounded-md border border-[#e8edf2] p-4">
             <p className="text-sm font-semibold text-[#253d4e]">Aminul Islam</p>
             <p className="mt-1 text-xs text-[#8a95a3]">Rated 4.0 • 1 week ago</p>
             <p className="mt-2 text-sm text-[#6b7280]">Taste and quality both are good. Price is a bit high but still worth it.</p>
           </article>
-          <article className="rounded-xl border border-[#e8edf2] p-4">
+          <article className="rounded-md border border-[#e8edf2] p-4">
             <p className="text-sm font-semibold text-[#253d4e]">Nabila Tasnim</p>
             <p className="mt-1 text-xs text-[#8a95a3]">Rated 4.5 • 2 weeks ago</p>
             <p className="mt-2 text-sm text-[#6b7280]">Good product details and easy to choose options. Will order again.</p>

@@ -13,7 +13,7 @@ const ProductDetailsPage = () => {
                 { label: 'Seeds of Change Organic Quinoa, Brown' }
             ]} />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white p-5 md:p-8 rounded-xl border border-[#e6ebf1]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white p-5 md:p-8 rounded-md border border-[#e6ebf1]">
                 <ProductGallery />
                 <ProductInfo />
             </div>

@@ -40,7 +40,7 @@ const PromotionBanner = () => {
   };
 
   return (
-    <section className="relative overflow-hidden rounded-xl border border-[#ece9dc]">
+    <section className="relative overflow-hidden rounded-md border border-[#ece9dc]">
       <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-out"
