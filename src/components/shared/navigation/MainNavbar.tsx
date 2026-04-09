@@ -11,7 +11,9 @@ const MainNavbar = () => {
         <div className="flex-1 max-w-3xl hidden md:block">
           <div className="flex w-full items-center h-12 rounded border border-primary overflow-hidden">
             <div className="bg-white hidden lg:flex items-center h-full border-r border-gray-200 px-4 cursor-pointer group">
-              <span className="text-sm font-bold text-text-main">All Categories</span>
+              <span className="text-sm font-bold text-text-main">
+                All Categories
+              </span>
               <ChevronDown className="w-4 h-4 ml-2 text-text-muted" />
             </div>
             <input
@@ -27,17 +29,11 @@ const MainNavbar = () => {
 
         <div className="flex items-center gap-2 sm:gap-4 shrink-0">
           <Link
-            href="/dashboard"
-            className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main relative transition-colors"
-          >
-            <User className="w-6 h-6" />
-          </Link>
-          <Link
             href="/dashboard/wishlist"
             className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main relative transition-colors"
           >
             <Heart className="w-6 h-6" />
-            <span className="absolute top-1 right-0 w-4 h-4 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">
+            <span className="absolute top-1 right-0 w-5 h-5 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white">
               2
             </span>
           </Link>
@@ -47,10 +43,16 @@ const MainNavbar = () => {
           >
             <div className="relative">
               <ShoppingCart className="w-7 h-7 text-text-main" />
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-secondary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white dark:border-surface-dark">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white">
                 4
               </span>
             </div>
+          </Link>
+          <Link
+            href="/dashboard"
+            className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main relative transition-colors"
+          >
+            <User className="w-6 h-6" />
           </Link>
         </div>
       </div>

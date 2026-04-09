@@ -13,7 +13,7 @@ const menuItems = [
 
 const SubNavbar = () => {
   return (
-    <section className="hidden lg:block w-full border-y border-gray-200 bg-white">
+    <section className="hidden lg:block w-full border-y border-gray-100 bg-white">
       <div className="container h-14 flex items-center justify-between gap-6">
         <div className="flex items-center gap-8 min-w-0">
           <button
